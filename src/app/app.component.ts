@@ -17,23 +17,29 @@ import { Component } from '@angular/core';
     </div>
   </div>
 
-  <input type="button" class="btn btn-primary" value="Next"
+  <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled"
     style="float: right; margin-right: 10px; height: 900px; width: 100px;" (click)="next()">
-  <input type="button" class="btn btn-primary" value="Previous"
+  <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled"
     style="float: left; margin-left: 10px; height: 900px; width: 100px;" (click)="previous()">
   `
 })
 export class AppComponent {
   currentPage = 0;
   currentPercent = 0;
+  nextDisabled = true;
+  prevDisabled = false;
+  loaded = false;
+  constructor() {
+    this.updateProgressBarAndButtons(this.currentPage, this.currentPercent);
+    this.loaded = true;
+  }
 
   next() {
     if (this.currentPage !== 1900) {
+      $('#nextButton').attr('value', 'Next');
       this.currentPage += 190;
       this.currentPercent += 10;
-      this.updateProgressBar(this.currentPage, this.currentPercent);
-    } else {
-      alert('You are done!');
+      this.updateProgressBarAndButtons(this.currentPage, this.currentPercent);
     }
   }
 
@@ -41,14 +47,25 @@ export class AppComponent {
     if (this.currentPage !== 0) {
       this.currentPage -= 190;
       this.currentPercent -= 10;
-      this.updateProgressBar(this.currentPage, this.currentPercent);
-    } else {
-      alert('You can\'t go further back!!');
+      this.updateProgressBarAndButtons(this.currentPage, this.currentPercent);
     }
   }
 
-  updateProgressBar(page, percent) {
-    $('#bike-builder-progress-bar')[0].innerHTML = '' + percent + '%';
-    $('.progress-bar').animate({width: page}, 100);
+  updateProgressBarAndButtons(page, percent) {
+    if (page !== 0) {
+      this.prevDisabled = false;
+    } else {
+      this.prevDisabled = true;
+      $('#nextButton').attr('value', 'Start');
+    }
+    if (percent === 100) {
+      this.nextDisabled = true;
+    } else {
+      this.nextDisabled = false;
+    }
+    if (this.loaded) {
+      $('#bike-builder-progress-bar')[0].innerHTML = '' + percent + '%';
+      $('.progress-bar').animate({width: page}, 100);
+    }
   }
 }
