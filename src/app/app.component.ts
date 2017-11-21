@@ -16,11 +16,13 @@ import { Component } from '@angular/core';
       style="width: 0%">
     </div>
   </div>
-
-  <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled"
-    style="float: right; margin-right: 10px; height: 900px; width: 100px;" (click)="next()">
-  <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled"
-    style="float: left; margin-left: 10px; height: 900px; width: 100px;" (click)="previous()">
+  <div>
+    <app-page-1></app-page-1>
+    <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled"
+      style="float: right; margin-right: 10px; height: 900px; width: 100px;" (click)="next()">
+    <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled"
+      style="float: left; margin-left: 10px; height: 900px; width: 100px;" (click)="previous()">
+    </div>
   `
 })
 export class AppComponent {
@@ -65,7 +67,7 @@ export class AppComponent {
     }
     if (this.loaded) {
       $('#bike-builder-progress-bar')[0].innerHTML = '' + percent + '%';
-      $('.progress-bar').animate({width: page}, 100);
+      $('.progress-bar').animate({width: page}, 500);
     }
   }
 }
