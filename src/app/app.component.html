@@ -10,9 +10,7 @@
   </div>
 </div>
 <div>
-  <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled"
-      style="float: left; margin-left: 10px; height: 900px; width: 100px;" (click)="previous()">
-  <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled"
-      style="float: right; margin-right: 10px; height: 900px; width: 100px;" (click)="next()">
+  <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled" (click)="previous()">
+  <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled" (click)="next()">
       <router-outlet></router-outlet>
 </div>
