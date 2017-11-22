@@ -11,7 +11,11 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   currentPage = 0;
   currentPercent = 0;
-  nextDisabled = true;
-  prevDisabled = false;
+  nextDisabled = false;
+  prevDisabled = true;
   loaded = false;
+
+  constructor() {
+
+  }
 }
