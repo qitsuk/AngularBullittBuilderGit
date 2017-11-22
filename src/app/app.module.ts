@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { Page1Component } from './page1.component';
+import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './notfound.component';
 import { routing } from './app.routing';
 
@@ -13,7 +13,7 @@ import * as $ from 'jquery';
 @NgModule({
   declarations: [
     AppComponent,
-    Page1Component,
+    WelcomeComponent,
     NotFoundComponent
   ],
   imports: [

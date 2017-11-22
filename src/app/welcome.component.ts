@@ -4,11 +4,14 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-page-1',
-    templateUrl: 'page1.component.html'
+    selector: 'app-welcome',
+    templateUrl: 'welcome.component.html'
 })
 
-export class Page1Component {
+export class WelcomeComponent {
+    nextDisabled = false;
+    prevDisabled = true;
+
     constructor(private _router: Router) {
     }
 }
