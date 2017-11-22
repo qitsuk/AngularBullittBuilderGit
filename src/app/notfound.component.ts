@@ -27,4 +27,7 @@ import { Component } from '@angular/core';
 })
 
 export class NotFoundComponent {
+    constructor() {
+        $('#bike-builder-progress-bar').hide();
+    }
 }
