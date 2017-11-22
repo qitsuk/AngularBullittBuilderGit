@@ -1,29 +1,10 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template:
-  `
-  <div class="progress"
-  style="margin-top: 10px; margin-left: 10px; margin-right: 10px;">
-    <div
-      id="bike-builder-progress-bar"
-      class="progress-bar
-      progress-bar-striped active"
-      role="progressbar"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style="width: 0%">
-    </div>
-  </div>
-  <div>
-    <app-page-1></app-page-1>
-    <input type="button" id="nextButton" class="btn btn-primary" value="Start" [disabled]="nextDisabled"
-      style="float: right; margin-right: 10px; height: 900px; width: 100px;" (click)="next()">
-    <input type="button" id="previousButton" class="btn btn-primary" value="Previous" [disabled]="prevDisabled"
-      style="float: left; margin-left: 10px; height: 900px; width: 100px;" (click)="previous()">
-    </div>
-  `
+  templateUrl: 'app.component.html'
 })
 export class AppComponent {
   currentPage = 0;

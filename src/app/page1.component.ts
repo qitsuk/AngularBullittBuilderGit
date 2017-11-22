@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
     selector: 'app-page-1',
     template:
     `
-        <h1 style="text-align:center;">This is the same test!</h1>
+       <h1 style="text-align:center;">This is the same test!</h1>
     `
 })
 
