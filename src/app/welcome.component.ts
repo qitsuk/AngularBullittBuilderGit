@@ -10,9 +10,6 @@ import { Router } from '@angular/router';
 })
 
 export class WelcomeComponent {
-    nextDisabled = false;
-    prevDisabled = true;
-
     constructor(private _router: Router) {
     }
 }
