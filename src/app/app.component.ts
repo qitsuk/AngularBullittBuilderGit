@@ -6,6 +6,7 @@ import { FormControl } from '@angular/forms';
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
+
 export class AppComponent {
   currentPage = 0;
   currentPercent = 0;

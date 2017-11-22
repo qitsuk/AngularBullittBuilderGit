@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-page-1',
-    template:
-    `
-       <h1 style="text-align:center;">This is the same test!</h1>
-    `
+    templateUrl: 'page1.component.html'
 })
 
 export class Page1Component {
+    constructor(private _router: Router) {
+    }
 }

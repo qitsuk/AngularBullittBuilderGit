@@ -5,6 +5,6 @@ import { Page1Component } from './page1.component';
 import { NotFoundComponent } from './notfound.component';
 
 export const routing = RouterModule.forRoot([
-    { path: 'Page1', component: Page1Component },
+    { path: '', component: Page1Component },
     { path: '**', component: NotFoundComponent }
 ]);
