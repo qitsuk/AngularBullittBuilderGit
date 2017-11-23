@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
       this.updateProgressBar(this.currentPercent);
       switch (this.currentPercent) {
         case 0:
-          this._router.navigate(['']);
+          this._router.navigate(['welcome']);
           break;
         case 10:
           this._router.navigate(['frame']);
@@ -58,6 +58,16 @@ export class AppComponent implements OnInit {
       $('#nextButton').attr('value', 'Next');
     }
     this.updateProgressBar(this.currentPercent);
+    switch (this.currentPercent) {
+      case 0:
+        this._router.navigate(['welcome']);
+        break;
+      case 10:
+        this._router.navigate(['frame']);
+        break;
+      default:
+        break;
+    }
   }
 
   updateProgressBar(percent) {
@@ -65,6 +75,7 @@ export class AppComponent implements OnInit {
     $('#tempid')[0].innerText = percent + '%';
   }
   ngOnInit() {
+    this._router.navigate(['welcome']);
     this.updateProgressBar(0);
   }
 }

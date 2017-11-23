@@ -6,7 +6,7 @@ import { NotFoundComponent } from './notfound.component';
 import { FrameComponent } from './frame.component';
 
 export const routing = RouterModule.forRoot([
-    { path: '', component: WelcomeComponent },
+    { path: 'welcome', component: WelcomeComponent },
     { path: 'frame', component: FrameComponent },
     { path: '**', component: NotFoundComponent }
 ]);
