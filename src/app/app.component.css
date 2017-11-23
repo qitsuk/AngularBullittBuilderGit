@@ -29,3 +29,6 @@
 body{
     background-color:rgb(231, 231, 231);
 }
+.progress {
+    margin-top: 10px;
+}
