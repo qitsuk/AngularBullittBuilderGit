@@ -6,6 +6,8 @@
   <div class="bikeCarousel">
     <ngx-carousel
       [inputs]="carouselOne">
+      <button NgxCarouselPrev class='btn btn-primary btn-sm leftRs btn-carousel'>&lt;</button>
+      <button NgxCarouselNext class='btn btn-primary btn-sm rightRs btn-carousel'>&gt;</button>
       <ngx-item NgxCarouselItem>
         <img class="carouselImg" src="http://www.larryvsharry.com/wp-content/uploads/2016/04/Alfine_plstbox_clockwork.png"/>
       </ngx-item>
@@ -21,8 +23,7 @@
       <ngx-item NgxCarouselItem>
         <img class="carouselImg" src="http://www.larryvsharry.com/wp-content/uploads/2016/04/Ebullitt_pepper.png" />
       </ngx-item>
-      <button NgxCarouselPrev class='leftRs'>&lt;</button>
-      <button NgxCarouselNext class='rightRs'>&gt;</button>
+      
     </ngx-carousel>
     </div>
 
