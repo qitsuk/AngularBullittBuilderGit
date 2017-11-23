@@ -43,6 +43,21 @@ export class AppComponent implements OnInit {
         case 20:
           this._router.navigate(['color']);
           break;
+        case 30:
+          this._router.navigate(['drivetrain']);
+          break;
+        case 40:
+          this._router.navigate(['customize']);
+          break;
+        case 50:
+          this._router.navigate(['accessories']);
+          break;
+        case 60:
+          this._router.navigate(['extras']);
+          break;
+        case 70:
+          this._router.navigate(['overview']);
+          break;
         default:
           break;
       }
@@ -70,6 +85,21 @@ export class AppComponent implements OnInit {
         break;
       case 20:
         this._router.navigate(['color']);
+        break;
+      case 30:
+        this._router.navigate(['drivetrain']);
+        break;
+      case 40:
+        this._router.navigate(['customize']);
+        break;
+      case 50:
+        this._router.navigate(['accessories']);
+        break;
+      case 60:
+        this._router.navigate(['extras']);
+        break;
+      case 70:
+        this._router.navigate(['overview']);
         break;
       default:
         break;

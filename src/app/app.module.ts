@@ -11,13 +11,20 @@ import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './notfound.component';
 import { FrameComponent } from './frame.component';
 import { ColorComponent } from './color.component';
+import { DrivetrainComponent } from './drivetrain.component';
+import { CustomizeComponent } from './customize.component';
+import { AccessoriesComponent } from './accessories.component';
+import { ExtrasComponent } from './extras.component';
+import { OverviewComponent } from './overview.component';
 
 import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent, WelcomeComponent, NotFoundComponent,
-    FrameComponent, ColorComponent
+    FrameComponent, ColorComponent, DrivetrainComponent,
+    CustomizeComponent, AccessoriesComponent, ExtrasComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
