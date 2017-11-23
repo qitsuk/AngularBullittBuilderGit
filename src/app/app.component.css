@@ -6,6 +6,7 @@
     background-color:rgb(172, 172, 172);
     opacity: 0.5;
     border:0px;
+    
 }
 #nextButton {
     float: right;
@@ -15,9 +16,13 @@
     background-color:rgb(172, 172, 172);
     opacity: 0.5;
     border:0px;
+    
 }
 
 
 #tempid {
     width: 100%;
+}
+body{
+    background-color:rgb(231, 231, 231);
 }

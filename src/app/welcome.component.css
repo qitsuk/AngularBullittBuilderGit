@@ -1,7 +1,6 @@
 #welcomeHeadline {
     text-align: center;
-  
-    margin-bottom:50px;
+    margin-bottom:25px;
 }
 
 #welcomeText {
@@ -19,7 +18,18 @@
     width: 750px;
     margin:auto;
     border-top: 1px solid rgb(180, 180, 180);
-    border-bottom: 1px solid rgb(180, 180, 180);
-    margin-top:10px;
+    margin-top:25px;
+  
     margin-bottom:10px;
 }
+body{
+    background-color:rgb(231, 231, 231);
+}
+.carousel-control.right{
+background-image: linear-gradient(to right,rgba(24, 27, 199,.0001) 0,
+rgba(24, 27, 199, 0.56) 100%) !important;
+}
+.carousel-control.left{
+    background-image: linear-gradient(to left,rgba(24, 27, 199,.0001) 0,
+    rgba(24, 27, 199, 0.56) 100%) !important;
+    }
