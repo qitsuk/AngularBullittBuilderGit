@@ -40,6 +40,9 @@ export class AppComponent implements OnInit {
         case 10:
           this._router.navigate(['frame']);
           break;
+        case 20:
+          this._router.navigate(['color']);
+          break;
         default:
           break;
       }
@@ -64,6 +67,9 @@ export class AppComponent implements OnInit {
         break;
       case 10:
         this._router.navigate(['frame']);
+        break;
+      case 20:
+        this._router.navigate(['color']);
         break;
       default:
         break;

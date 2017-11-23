@@ -10,15 +10,14 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './notfound.component';
 import { FrameComponent } from './frame.component';
+import { ColorComponent } from './color.component';
 
 import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WelcomeComponent,
-    NotFoundComponent,
-    FrameComponent
+    AppComponent, WelcomeComponent, NotFoundComponent,
+    FrameComponent, ColorComponent
   ],
   imports: [
     BrowserModule,
