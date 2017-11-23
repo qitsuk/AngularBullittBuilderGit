@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
           this._router.navigate(['']);
           break;
         case 10:
-          this._router.navigate(['notfound']);
+          this._router.navigate(['frame']);
           break;
         default:
           break;

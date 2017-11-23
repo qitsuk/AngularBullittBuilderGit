@@ -4,18 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
+import * as $ from 'jquery';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './notfound.component';
+import { FrameComponent } from './frame.component';
+
 import { routing } from './app.routing';
-import * as $ from 'jquery';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FrameComponent
   ],
   imports: [
     BrowserModule,
