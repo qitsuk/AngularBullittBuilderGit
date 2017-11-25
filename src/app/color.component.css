@@ -7,12 +7,13 @@
 }
 .wrapper{
     margin:auto;
-   
+
 }
-body{
-    background-color:rgb(231, 231, 231);
-    height:100000px;
+body {
+    background-color:rgb(231, 231, 231) !important;
+    height:100%;
     margin:auto;
+    text-align: center !important;
 }
 .col-sm-3{
     margin:auto;
