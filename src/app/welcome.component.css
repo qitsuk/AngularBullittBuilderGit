@@ -25,6 +25,7 @@
 }
 body{
     background-color:rgb(231, 231, 231);
+    min-height:900px;
 }
 .carousel-control.right{
     background-image: linear-gradient(to right,rgba(252, 252, 252, 0) 0,
