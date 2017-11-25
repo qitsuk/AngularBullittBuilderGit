@@ -7,16 +7,18 @@
 }
 .wrapper{
     margin:auto;
-   
+
 }
-body{
+body {
     background-color:rgb(231, 231, 231);
-    height:100000px;
+    min-height:900px;
     margin:auto;
+    text-align: center !important;
 }
 .col-sm-3{
     margin:auto;
 }
+<<<<<<< HEAD
 #previousButton {
     float: left;
     margin-left: 10px;
@@ -40,3 +42,5 @@ body{
     border:0px;
     
 }
+=======
+>>>>>>> 1b35f2a69b4683d56256f2fce03d6fbc6d1452c3

@@ -29,4 +29,5 @@
 body{
     padding-top:10px;
     background-color:rgb(231, 231, 231);
+    min-height:1000px;
 }
