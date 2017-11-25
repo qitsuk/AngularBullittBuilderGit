@@ -1,32 +1,36 @@
 <body>
-<div class='wrapper'> 
-<h1> Step 6 - Extras</h1> 
-<div class='col-sm-6'> 
-<div class='checkbox'>  
-<label><input type='checkbox' value=''>DYNAMO 20\" FRONT WHEEL (ALFINE/ALEX DM24)  </label> 
-</div>  
-<div class='checkbox'>  
-<label><input type='checkbox' value=''>REELIGHTS </label> 
-</div>  
-<div class='checkbox'>  
-<label><input type='checkbox' value=''>CROMO KICKSTAND  )</label> 
- </div> 
-     </div>  
-     <div class='col-sm-6'> 
-       <div class='checkbox'>  
-     <label><input type='checkbox' value=''>ABUS 5400 GRANITE U-LOCK</label> 
-     </div>  
-       <div class='checkbox'>  
-     <label><input type='checkbox' value=''>ABUS BORDO 6500 GRANIT X PLUS  </label> 
-     </div>  
-       <div class='checkbox'>  
-     <label><input type='checkbox' value=''>ABUS 9100 IVY CHAIN LOCK </label> 
-     </div>  
-       <div class='checkbox'>  
-     <label><input type='checkbox' value=''>ABUS BORDO + DETECTO 8077 ALARM  </label> 
-     </div> 
-     </div>  
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class='wrapper'>
+        <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
+        <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+        <h1> Step 6 - Extras</h1> 
+        <div class='col-sm-6'> 
+        <div class='checkbox'>  
+          <label><input type='checkbox' value=''>DYNAMO 20\" FRONT WHEEL (ALFINE/ALEX DM24)  </label> 
+        </div>  
+        <div class='checkbox'>  
+          <label><input type='checkbox' value=''>REELIGHTS </label> 
+        </div>  
+        <div class='checkbox'>  
+        <label><input type='checkbox' value=''>CROMO KICKSTAND  )</label> 
+      </div> 
+          </div>  
+          <div class='col-sm-6'> 
+            <div class='checkbox'>  
+          <label><input type='checkbox' value=''>ABUS 5400 GRANITE U-LOCK</label> 
+          </div>  
+            <div class='checkbox'>  
+          <label><input type='checkbox' value=''>ABUS BORDO 6500 GRANIT X PLUS  </label> 
+          </div>  
+            <div class='checkbox'>  
+          <label><input type='checkbox' value=''>ABUS 9100 IVY CHAIN LOCK </label> 
+          </div>  
+            <div class='checkbox'>  
+          <label><input type='checkbox' value=''>ABUS BORDO + DETECTO 8077 ALARM  </label> 
+          </div> 
+          </div>  
 
 
-     </div>
+          </div>
+        </form>
     </body>

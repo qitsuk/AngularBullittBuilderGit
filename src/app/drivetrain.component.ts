@@ -16,7 +16,7 @@ export class DrivetrainComponent {
     }
     submit() {
         console.log('WRITE SOMETHING THEN!!');
-        this._router.navigate(['accessories']);
+        this._router.navigate(['customize']);
         this._ac.updateProgressBar(40);
     }
     back() {

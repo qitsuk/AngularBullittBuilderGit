@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AppComponent } from './app.component';
 
 @Component({
     selector: 'app-extras-component',
@@ -7,5 +10,18 @@ import { Component } from '@angular/core';
 })
 
 export class ExtrasComponent {
+    form: FormGroup;
+
+    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent) {
+        this.form = fb.group({});
+    }
+    submit() {
+        this._router.navigate(['notfound']);
+        this._ac.updateProgressBar(0);
+    }
+    back() {
+        this._router.navigate(['accessories']);
+        this._ac.updateProgressBar(50);
+    }
 
 }

@@ -1,56 +1,60 @@
-<h1>Customize your bike.</h1>
-<div>
-    <p>
-        All our models feature powerful, hydraulic disc brake systems for smoother,<br>
-        more controlled stopping. We have purposefully chosen brakes from leading manufacturers<br>
-        Shimano, Magura and Tektro and matched them to the most relevant component groups.<br>
-        For simple aftermarket servicing, we have also ensured our brakes have great brake pad<br>
-        durability and easy aftermarket servicing.
-    </p>
-</div>
-<h2>Handlebars</h2>
-<div>
-    <input type="radio">
-    <label>Riserbar +€26.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Flatbar +€26.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Cruiser +€26.00</label>
-</div>
-<h2>Seatposts</h2>
-<div>
-    <input type="radio">
-    <label>Short +€42.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Long +€42.00</label>
-</div>
-<h2>Saddles</h2>
-<div>
-    <input type="radio">
-    <label>Race Black +€54.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Race White +€54.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Brooks B17, Brown +€114.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Brooks B17, Black +€114.00</label>
-</div><div>
-    <input type="radio">
-    <label>Brooks B67, Brown +€125.00</label>
-</div>
-<div>
-    <input type="radio">
-    <label>Brooks B67, Black +€125.00</label>
-</div>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
+    <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+    <h1>Step 4 - Customize your bike.</h1>
+    <div>
+        <p>
+            All our models feature powerful, hydraulic disc brake systems for smoother,<br>
+            more controlled stopping. We have purposefully chosen brakes from leading manufacturers<br>
+            Shimano, Magura and Tektro and matched them to the most relevant component groups.<br>
+            For simple aftermarket servicing, we have also ensured our brakes have great brake pad<br>
+            durability and easy aftermarket servicing.
+        </p>
+    </div>
+    <h2>Handlebars</h2>
+    <div>
+        <input type="radio">
+        <label>Riserbar +€26.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Flatbar +€26.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Cruiser +€26.00</label>
+    </div>
+    <h2>Seatposts</h2>
+    <div>
+        <input type="radio">
+        <label>Short +€42.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Long +€42.00</label>
+    </div>
+    <h2>Saddles</h2>
+    <div>
+        <input type="radio">
+        <label>Race Black +€54.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Race White +€54.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Brooks B17, Brown +€114.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Brooks B17, Black +€114.00</label>
+    </div><div>
+        <input type="radio">
+        <label>Brooks B67, Brown +€125.00</label>
+    </div>
+    <div>
+        <input type="radio">
+        <label>Brooks B67, Black +€125.00</label>
+    </div>
+</form>
