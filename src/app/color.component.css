@@ -24,7 +24,7 @@ body {
 }
 #previousButton {
     float: left;
-    margin-left: 10px;
+    
     height: 900px;
     width: 100px;
    
@@ -35,7 +35,7 @@ body {
 }
 #nextButton {
     float: right;
-    margin-right: 10px;
+   
     height: 900px;
     width: 100px;
     
