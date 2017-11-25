@@ -2,8 +2,12 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="form-group">
             <div class='wrapper'>
-                <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
-                <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+                    <button id="previousButton"  class="btn btn-primary" value="Previous" type="submit" (click)="back()">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                          </button>
+                <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </button>
                 <h1> Step 1 - Choose Your Bike</h1>
                 <div class="container">
                     <div class='col-sm-4 ' >

@@ -1,6 +1,10 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-    <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
-    <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+        <button id="previousButton"  class="btn btn-primary" value="Previous" type="submit" (click)="back()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </button>
+    <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </button>
     <h1>Step 4 - Customize your bike.</h1>
     <div>
         <p>

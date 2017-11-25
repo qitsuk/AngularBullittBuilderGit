@@ -2,7 +2,9 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
       <div class='wrapper'>
         <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
-        <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+        <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </button>
         <h1> Step 6 - Extras</h1> 
         <div class='col-sm-6'> 
         <div class='checkbox'>  
