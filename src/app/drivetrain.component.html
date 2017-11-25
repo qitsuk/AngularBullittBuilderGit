@@ -1,5 +1,5 @@
 <body>
-    <form [formGroup]="form" (ngSumbit)="submit">
+    <form [formGroup]="form" (ngSubmit)="submit()">
         <input type="button" id="previousButton" class="btn btn-primary" value="Previous" (click)="back()">
         <input type="button" id="nextButton" class="btn btn-primary" value="Next" type="submit">
         <h1> Step 3 - Model</h1>  

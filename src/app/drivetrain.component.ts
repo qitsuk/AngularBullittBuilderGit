@@ -15,6 +15,7 @@ export class DrivetrainComponent {
         this.form = fb.group({});
     }
     submit() {
+        console.log('WRITE SOMETHING THEN!!');
         this._router.navigate(['accessories']);
         this._ac.updateProgressBar(40);
     }

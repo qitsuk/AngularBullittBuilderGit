@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Rx';
 import { FormControl } from '@angular/forms';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Router } from '@angular/router';
-import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+// import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   totalPrice;
   id = '0';
 
-  constructor(private _router: Router, private _db: AngularFireDatabase) {
+  constructor(private _router: Router, /* private _db: AngularFireDatabase*/) {
   }
 
   updateProgressBar(percent) {
