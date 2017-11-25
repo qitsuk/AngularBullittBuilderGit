@@ -4,11 +4,21 @@ body{
 }
 
 
-.col-sm-6{
-   margin:auto;
-   text-align:center;
-   
-  }
+.col-sm-6-left, .col-sm-6-right {
+  float: left;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-right: 10px;
+  max-width: calc(50% - 5px);
+ }
+
+ .col-sm-6-right {
+  margin-right: 0px;
+ }
+
+ .radio {
+   display: 
+ }
 
   .tablecontent{
     display:block;
@@ -41,4 +51,12 @@ body{
     margin:auto;
     padding:auto;
     text-align:center;
+}
+
+.col-med-10.columns.tablecontent {
+font-weight: bold;
+font-size: 24px;
+float: left;
+text-align: center;
+vertical-align: middle;
 }
