@@ -5,6 +5,10 @@ body {
   
 }
 #previousButton {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2; 
     float: left;
     height: 900px;
     width: 100px;
@@ -15,7 +19,13 @@ body {
     
 }
 #nextButton {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2; 
+    
     float: right;
+   
     height: 900px;
     width: 100px;
     
