@@ -1,0 +1,8 @@
+export class Bike {
+    frame: string;
+    color: string;
+    drivetrain: string;
+    customize: Array<string>;
+    accessories: Array<string>;
+    extras: Array<string>;
+}
