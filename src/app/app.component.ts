@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Rx';
 import { FormControl } from '@angular/forms';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Router } from '@angular/router';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,12 @@ export class AppComponent implements OnInit {
   nextDisabled = false;
   prevDisabled = true;
   loaded = false;
+  totalPrice;
+  id = '0';
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private _db: AngularFireDatabase) {
   }
+
   next() {
     if (this.currentPercent === 100) {
       $('#nextButton').attr('value', 'Order');
@@ -35,7 +39,7 @@ export class AppComponent implements OnInit {
       this.updateProgressBar(this.currentPercent);
       switch (this.currentPercent) {
         case 0:
-          this._router.navigate(['welcome']);
+          this._router.navigate(['']);
           break;
         case 10:
           this._router.navigate(['frame']);
@@ -78,7 +82,7 @@ export class AppComponent implements OnInit {
     this.updateProgressBar(this.currentPercent);
     switch (this.currentPercent) {
       case 0:
-        this._router.navigate(['welcome']);
+        this._router.navigate(['']);
         break;
       case 10:
         this._router.navigate(['frame']);
@@ -111,7 +115,7 @@ export class AppComponent implements OnInit {
     $('#tempid')[0].innerText = percent + '%';
   }
   ngOnInit() {
-    this._router.navigate(['welcome']);
+    this._router.navigate(['']);
     this.updateProgressBar(0);
   }
 }

@@ -12,7 +12,7 @@ import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
 
 export const routing = RouterModule.forRoot([
-    { path: 'welcome', component: WelcomeComponent },
+    { path: '', component: WelcomeComponent },
     { path: 'frame', component: FrameComponent },
     { path: 'color', component: ColorComponent},
     { path: 'drivetrain', component: DrivetrainComponent },
