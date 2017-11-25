@@ -1,9 +1,13 @@
 .radio{
-    margin:auto;
+    width: auto;
+    height: 100px; 
+    margin: 15px;
     
 }
-.imgcolorbikewizard{
-    width:50px;
+.imgcolorbikewizard {
+    height: 50px;
+    display: block;
+    margin: auto;
 }
 .wrapper{
     margin:auto;
