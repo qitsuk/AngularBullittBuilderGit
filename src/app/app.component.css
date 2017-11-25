@@ -31,3 +31,7 @@ body{
     background-color:rgb(231, 231, 231);
     min-height:1000px;
 }
+.progress{
+    margin-left:100px;
+    margin-right:100px;
+}
