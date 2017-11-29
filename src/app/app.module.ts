@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import * as $ from 'jquery';
+import { DropdownModule } from 'ngx-dropdown';
 // import { AngularFireModule } from 'angularfire2';
 // import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
@@ -42,6 +43,7 @@ export const firebaseConfig = {
   imports: [
     BrowserModule, FormsModule, HttpModule,
     ReactiveFormsModule, routing, NgxCarouselModule,
+    DropdownModule
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule
   ],
