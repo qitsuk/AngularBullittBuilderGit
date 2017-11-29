@@ -10,6 +10,7 @@ import { CustomizeComponent } from './customize.component';
 import { AccessoriesComponent } from './accessories.component';
 import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
+import { OrderFormComponent } from './order-form.component';
 
 export const routing = RouterModule.forRoot([
     { path: '', component: WelcomeComponent },
@@ -20,5 +21,6 @@ export const routing = RouterModule.forRoot([
     { path: 'accessories', component: AccessoriesComponent },
     { path: 'extras', component: ExtrasComponent},
     { path: 'overview', component: OverviewComponent},
+    { path: 'orderform', component: OrderFormComponent },
     { path: '**', component: NotFoundComponent }
 ]);
