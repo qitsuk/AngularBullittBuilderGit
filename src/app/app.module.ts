@@ -23,7 +23,6 @@ import { OrderFormComponent } from './order-form.component';
 import { CountriesService } from './countries.service';
 
 import { routing } from './app.routing';
-import { Ng4Dropdown } from 'ng4-material-dropdown/dist/src/modules/ng4-dropdown.module';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyD0CisY1liXgHsO8flQ9kH6yx9txRZjnBI',
