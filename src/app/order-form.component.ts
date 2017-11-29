@@ -22,4 +22,9 @@ export class OrderFormComponent {
         });
     }
 
+    back() {
+        this._router.navigate(['overview']);
+        this._ac.updateProgressBar(70);
+    }
+
 }
