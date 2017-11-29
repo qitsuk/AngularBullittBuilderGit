@@ -2,19 +2,24 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
+import { CountriesService } from './countries.service';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-order-form-component',
     templateUrl: 'order-form.component.html',
-    styleUrls: ['order-form.component.css']
+    styleUrls: ['order-form.component.css'],
+    providers: [CountriesService]
 })
 
-export class OrderFormComponent {
+export class OrderFormComponent implements OnInit {
     form: FormGroup;
-    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent) {
+    countries;
+    country = 'Country';
+    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent, private _countriesService: CountriesService) {
         this.form = fb.group({
             email: ['', Validators.compose([Validators.required, Validators.email])],
-            name: ['', Validators.required],
+            fullName: ['', Validators.required],
             address1: ['', Validators.required],
             address2: ['', Validators.required],
             city: ['', Validators.required],
@@ -27,4 +32,7 @@ export class OrderFormComponent {
         this._ac.updateProgressBar(70);
     }
 
+    ngOnInit() {
+        this.countries = this._countriesService.getCountries();
+    }
 }
