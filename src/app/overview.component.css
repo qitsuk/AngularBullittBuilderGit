@@ -1,6 +1,8 @@
 body{
     padding-left:110px;
     padding-right:110px;
+    background-color:rgb(231, 231, 231);
+    min-height:900px;
   }
   #previousButton {
     position: fixed;
