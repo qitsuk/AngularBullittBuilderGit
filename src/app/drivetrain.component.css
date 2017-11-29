@@ -2,12 +2,14 @@ h1 {
   text-align: center;
 }
 
-body{
-    background-color:rgb(231, 231, 231);
-    min-height:900px;
+.col-sm-6-left {
+  display: flex;              /* establish flex container */
+  justify-content: center;    /* center items vertically, in this case */
+  align-items: center; 
+
 }
 
-.radio{
+.radio {
   display:inline-block;
   width:auto;
   height: 200px; 
@@ -68,4 +70,6 @@ body{
 body{
   padding-left:110px;
   padding-right:110px;
+  background-color:rgb(231, 231, 231);
+  min-height:900px;
 }
