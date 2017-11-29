@@ -52,9 +52,13 @@
             You need to specify you ZIP number/postal code.
         </div>
     </div>
-    <div class="form-control">
-        <label for="country">
-            
-        </label>
-    </div>
+
+    <div class="dropdown" dropdown [dropdownToggle]="false" (onOpen)="doSomeActionOnOpen()" (onClose)="doSomeActionOnClose()">
+            <button class="btn btn-primary" dropdown-open>Country</button>
+            <ul class="dropdown-menu">
+                <li><a>Badman</a></li>
+                <li><a>Sadman</a></li>
+                <li><a>Lieman</a></li>
+            </ul>
+        </div>
 </form>
