@@ -48,3 +48,7 @@ body{
 .imgbikewizard {
     width: 100px;
      }
+
+.checkboxx {
+    display: inline !important;
+}
