@@ -19,10 +19,10 @@ body {
     margin:auto;
     text-align: center !important;
 }
-.col-sm-3{
-    margin:auto;
-}
 
+.radio {
+margin-top: 100px;
+}
 
 #previousButton {
     position: fixed;
