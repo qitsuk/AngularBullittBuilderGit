@@ -3,6 +3,11 @@
     margin: auto;
   }
 
+ .col-centered{
+float: none;
+margin: 0 auto;
+}
+
 
 #previousButton {
     position: fixed;
@@ -50,7 +55,7 @@ body{
      }
 
 
-     span{
+     span.seatspan {
         background: none repeat scroll 0 0 #F8F8F8;
         border: 5px solid #DFDFDF;
         color: #717171;
@@ -59,16 +64,15 @@ body{
         letter-spacing: 1px;
         line-height: 30px;
         margin: 0 auto;
-        position: relative;
+        position: absolute;
         text-align: center;
-        text-transform: uppercase;
-        top: -80px;
-        left:-30px;
+        text-transform: initial;
         display:none;
         padding:0 20px;
+        z-index: 100;
     }
     
-    span:after{
+    span.seatspan:after{
         content:'';
         position:absolute;
         bottom:-10px;
@@ -84,6 +88,6 @@ body{
          transform:rotate(45deg);
     }
     
-    h3:hover span{
+    h3:hover span.seatspan{
         display:block;
     }
