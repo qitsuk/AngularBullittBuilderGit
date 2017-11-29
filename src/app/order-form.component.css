@@ -1,8 +1,4 @@
-body{
-    padding-left:110px;
-    padding-right:110px;
-  }
-  #previousButton {
+#previousButton {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -37,7 +33,3 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
-body{
-    padding-left:110px;
-    padding-right:110px;
-  }

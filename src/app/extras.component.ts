@@ -16,8 +16,8 @@ export class ExtrasComponent {
         this.form = fb.group({});
     }
     submit() {
-        this._router.navigate(['notfound']);
-        this._ac.updateProgressBar(0);
+        this._router.navigate(['overview']);
+        this._ac.updateProgressBar(70);
     }
     back() {
         this._router.navigate(['accessories']);

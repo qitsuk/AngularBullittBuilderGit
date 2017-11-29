@@ -18,6 +18,7 @@ import { CustomizeComponent } from './customize.component';
 import { AccessoriesComponent } from './accessories.component';
 import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
+import { OrderFormComponent } from './order-form.component';
 
 import { routing } from './app.routing';
 
@@ -36,7 +37,7 @@ export const firebaseConfig = {
     AppComponent, WelcomeComponent, NotFoundComponent,
     FrameComponent, ColorComponent, DrivetrainComponent,
     CustomizeComponent, AccessoriesComponent, ExtrasComponent,
-    OverviewComponent
+    OverviewComponent, OrderFormComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule,
