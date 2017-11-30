@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Rx';
 import { FormControl } from '@angular/forms';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Router } from '@angular/router';
+import { BikeComponent } from './bike.component';
 // import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 
 @Component({

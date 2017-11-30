@@ -35,6 +35,6 @@ export class FrameComponent {
 
     onSelectionChange(entry, price) {
         this.frame = entry;
-        this.price = parseInt(price, 10);
+        this.price = price;
     }
 }

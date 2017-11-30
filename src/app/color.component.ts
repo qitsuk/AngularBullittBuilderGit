@@ -18,6 +18,7 @@ export class ColorComponent {
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
         this.bike = bike;
+        console.log(this.bike.totalPrice);
     }
     submit() {
         this._router.navigate(['drivetrain']);

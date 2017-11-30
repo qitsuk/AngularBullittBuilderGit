@@ -18,17 +18,20 @@ export class DrivetrainComponent {
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
         this.bike = bike;
-        console.log(this.bike.color);
+        console.log(this.bike.totalPrice);
     }
     submit() {
         this._router.navigate(['customize']);
         this._ac.updateProgressBar(40);
+        this.bike.totalPrice += this.price;
     }
     back() {
         this._router.navigate(['color']);
         this._ac.updateProgressBar(20);
     }
     onSelectionChange(drivetrain, price) {
-
+        this.drivetrain = drivetrain;
+        this.price = price;
+        console.log(price);
     }
 }
