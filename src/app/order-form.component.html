@@ -9,58 +9,81 @@
     <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
         <span class="glyphicon glyphicon-chevron-right"  ng-disabled="!form.valid"></span>
     </button>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" formControlName="email">
-        <div *ngIf="form.controls.email.touched && !form.controls.email.valid" class="alert alert-danger">
-             You have to enter a valid e-mail address.
-        </div>
-     </div>
+    
+    
+    
+    
 
-    <div class="form-group">
-        <label for="fullName">Full Name</label>
+
+
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email">
+        <div *ngIf="form.controls.email.touched && !form.controls.email.valid" class="alert alert-danger">
+          You have to enter a valid e-mail address.
+     </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="fullname">Full Name</label>
         <input type="text" class="form-control" formControlName="fullName">
         <div *ngIf="form.controls.fullName.touched && form.controls.fullName.errors?.required" class="alert alert-danger">
-            You have to enter your name.
-        </div>
+          You have to enter your name.
+      </div>
+      </div>
     </div>
-
-    <h5>Address</h5>
-
+  
+  
     <div class="form-group">
-        <label for="address1">Address 1</label>
-        <input type="text" class="form-control" formControlName="address1">
-        <div *ngIf="form.controls.address1.touched && form.controls.address1.errors?.required" class="alert alert-danger">
-            You need to enter a street name.
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="address2">Address 2</label>
-        <input type="text" class="form-control" formControlName="address2">
-        <div *ngIf="form.controls.address2.touched && form.controls.address2.errors?.required" class="alert alert-info">
-            You haven't entered anything here. It's not required, just making you aware of it.
-        </div>
+      <label for="inputAddress">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address1">
+      <div *ngIf="form.controls.address1.touched && form.controls.address1.errors?.required" class="alert alert-danger">
+          You need to enter a street name.
+      </div>
     </div>
     <div class="form-group">
-        <label for="city">City</label>
-        <input type="text" class="form-control" formControlName="city">
+      <label for="inputAddress2">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" formControlName="address2">
+      <div *ngIf="form.controls.address1.touched && form.controls.address1.errors?.required" class="alert alert-danger">
+          You need to enter number, apartment, studio or floor.
+      </div>
+    </div>
+  
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity" formControlName="city">
         <div *ngIf="form.controls.city.touched && form.controls.city.errors?.required" class="alert alert-danger">
-            You need to specify a city.
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="postalCode">ZIP/Postal Code</label>
-        <input type="number" class="form-control" formControlName="postalCode">
+          You need to specify a city.
+      </div>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip" formControlName="postalCode">
         <div *ngIf="form.controls.postalCode.touched && form.controls.postalCode.errors?.required" class="alert alert-danger">
-            You need to specify you ZIP number/postal code.
-        </div>
+          You need to specify you ZIP number/postal code.
+      </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputCountry">Country</label>
+        <select id="inputCountry" class="form-control">
+          <option selected>Choose...</option>
+          <option *ngFor="let country of countries">
+              {{country.name}}
+          </option>
+        </select>
+      </div>
+      
     </div>
+    
+  </form>
 
-    <div class="dropdown" dropdown [dropdownToggle]="false" data-container="body">
-            <button class="btn btn-primary" dropdown-open>{{ country }}</button>
-            <ul class="dropdown-menu">
-                <li *ngFor="let country of countries">{{ country }}</li>
-            </ul>
-        </div>
 </form>
+
+
+
+
+
 </body>
