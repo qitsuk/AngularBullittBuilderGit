@@ -26,6 +26,10 @@ export class OrderFormComponent implements OnInit {
             postalCode: ['', Validators.required]
         });
     }
+    submit() {
+        this._router.navigate(['orderconfirmation']);
+        this._ac.updateProgressBar(90);
+    }
 
     back() {
         this._router.navigate(['overview']);
