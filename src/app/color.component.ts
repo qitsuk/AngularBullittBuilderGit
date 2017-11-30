@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AppComponent } from './app.component';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { BikeComponent } from './bike.component';
 
 @Component({
     selector: 'app-color-component',
@@ -11,16 +12,24 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 export class ColorComponent {
     form: FormGroup;
+    bike;
+    color;
 
-    constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder) {
+    constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
+        this.bike = bike;
+        console.log(this.bike.totalPrice);
     }
     submit() {
         this._router.navigate(['drivetrain']);
         this._ac.updateProgressBar(30);
+        this.bike.color = this.color;
     }
     back() {
         this._router.navigate(['frame']);
         this._ac.updateProgressBar(10);
+    }
+    onSelectionChange(selection) {
+        this.color = selection;
     }
 }

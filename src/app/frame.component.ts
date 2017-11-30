@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
-import { Bike } from './bike';
+import { BikeComponent } from './bike.component';
 
 @Component ({
     selector: 'app-frame-component',
@@ -12,19 +12,29 @@ import { Bike } from './bike';
 
 export class FrameComponent {
     form: FormGroup;
-    bike = new Bike();
-    constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder) {
+    frame: string;
+    price: number;
+    bike;
+    constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({
             framekit: ['', Validators.required]
         });
+        this.bike = bike;
     }
 
     submit() {
         this._router.navigate(['color']);
         this._ac.updateProgressBar(20);
+        this.bike.totalPrice = this.price;
+        this.bike.frame = this.frame;
     }
     back() {
         this._router.navigate(['']);
         this._ac.updateProgressBar(0);
+    }
+
+    onSelectionChange(entry, price) {
+        this.frame = entry;
+        this.price = price;
     }
 }
