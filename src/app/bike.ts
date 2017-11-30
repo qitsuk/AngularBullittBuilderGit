@@ -5,4 +5,5 @@ export class Bike {
     customize: Array<string>;
     accessories: Array<string>;
     extras: Array<string>;
+    totalPrice: number;
 }

@@ -2,30 +2,30 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="form-group">
             <div class='wrapper'>
-                    <button id="previousButton"  class="btn btn-primary" value="Previous" type="submit" (click)="back()">
+                <button id="previousButton"  class="btn btn-primary" value="Previous" type="submit" (click)="back()">
                             <span class="glyphicon glyphicon-chevron-left"></span>
-                          </button>
+                </button>
                 <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
                         <span class="glyphicon glyphicon-chevron-right"></span>
-                      </button>
+                </button>
                 <h1> Step 1 - Choose Your Bike</h1>
                 <div class="container">
                     <div class='col-sm-4 ' >
                     <img src='http://shop.larryvsharry.com/skin/frontend/lvsh/lvsh/images/homepage-full-bike-icon.png' class='imgbikewizard' >
                     <div class='radio'>
-                        <label><input type='radio' name='optradio'>Fullbike</label> 
+                        <label><input type='radio' [(ngModel)]="bike.frame" name='optradio' value=''>Fullbike</label> 
                     </div>
                         Full Bike
                         If you are buying a Full bike, everything to ride safely and securely is included;
                         reflectors complying with EU regulations, front and rear mudguards to keep that gritty spray away and an Abus, 
-                        insurance approved ring lock." 
+                        insurance approved ring lock.
                     </div>
 
                     <div class='col-sm-4'>
                     <img src='http://shop.larryvsharry.com/skin/frontend/lvsh/lvsh/images/homepage-frame-kit-icon.png' class='imgbikewizard'>
 
                     <div class='radio'>
-                        <label><input type='radio' name='optradio'>Framekit</label> 
+                        <label><input type='radio' [(ngModel)]="bike.frame" name='optradio'>Framekit</label> 
                     </div> 
                         Framekit
                         If you have bought a Bullitt frame, here's what to expect; An aluminium frame, 
@@ -38,7 +38,7 @@
                     <div class='col-sm-4'>
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/e/b/ebullit_drivetrain2_test_3.png' class='imgbikewizard'>
                     <div class='radio'>
-                        <label><input type='radio' name='optradio'>Steps EBullit Full Bike</label> 
+                        <label><input type='radio' [(ngModel)]="bike.frame" name='optradio'>Steps EBullit Full Bike</label> 
                     </div>
                     The STePS eBullitt system includes a 250W, 36-volt electric drive unit, or motor, that will help get you up to speed, 
                     but cuts out at 15.5mph (25km/h). You can go faster than that if you want but any speeds over 15.5mph have to be 

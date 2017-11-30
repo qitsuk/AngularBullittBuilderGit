@@ -13,6 +13,7 @@ export class DrivetrainComponent {
     form: FormGroup;
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder) {
         this.form = fb.group({});
+        console.log(bike.frame);
     }
     submit() {
         console.log('WRITE SOMETHING THEN!!');
