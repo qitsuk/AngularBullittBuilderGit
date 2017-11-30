@@ -16,7 +16,7 @@ h1 {
 }
 .componentimg{
   height: 150px;
-  width: 315px;
+
   display:block;
   margin: auto;
 }
@@ -26,10 +26,7 @@ h1 {
     text-align:center;
 }
 
-.img {
-  height: 150px;
-  width: 250px;
-}
+
 
 #previousButton {
   position: fixed;

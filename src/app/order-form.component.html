@@ -7,7 +7,7 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </button>
     <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="glyphicon glyphicon-chevron-right"  ng-disabled="!form.valid"></span>
     </button>
     <div class="form-group">
         <label for="email">Email</label>
@@ -18,48 +18,48 @@
      </div>
 
     <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <div *ngIf="form.controls.name.touched && form.controls.name.errors.required" class="alert alert-danger">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" formControlName="fullName">
+        <div *ngIf="form.controls.fullName.touched && form.controls.fullName.errors?.required" class="alert alert-danger">
             You have to enter your name.
         </div>
     </div>
+
     <h5>Address</h5>
+
     <div class="form-group">
         <label for="address1">Address 1</label>
         <input type="text" class="form-control" formControlName="address1">
-        <div *ngIf="form.controls.address1.touched && form.controls.address1.errors.required" class="alert alert-danger">
+        <div *ngIf="form.controls.address1.touched && form.controls.address1.errors?.required" class="alert alert-danger">
             You need to enter a street name.
         </div>
     </div>
     <div class="form-group">
         <label for="address2">Address 2</label>
         <input type="text" class="form-control" formControlName="address2">
-        <div *ngIf="form.controls.address2.touched && form.controls.address2.errors.required" class="alert alert-info">
+        <div *ngIf="form.controls.address2.touched && form.controls.address2.errors?.required" class="alert alert-info">
             You haven't entered anything here. It's not required, just making you aware of it.
         </div>
     </div>
     <div class="form-group">
         <label for="city">City</label>
         <input type="text" class="form-control" formControlName="city">
-        <div *ngIf="form.controls.city.touched && form.controls.city.errors.required" class="alert alert-danger">
+        <div *ngIf="form.controls.city.touched && form.controls.city.errors?.required" class="alert alert-danger">
             You need to specify a city.
         </div>
     </div>
     <div class="form-group">
         <label for="postalCode">ZIP/Postal Code</label>
         <input type="number" class="form-control" formControlName="postalCode">
-        <div *ngIf="form.controls.postalCode.touched && form.controls.postalCode.errors.required" class="alert alert-danger">
+        <div *ngIf="form.controls.postalCode.touched && form.controls.postalCode.errors?.required" class="alert alert-danger">
             You need to specify you ZIP number/postal code.
         </div>
     </div>
 
-    <div class="dropdown" dropdown [dropdownToggle]="false" (onOpen)="doSomeActionOnOpen()" (onClose)="doSomeActionOnClose()">
-            <button class="btn btn-primary" dropdown-open>Country</button>
+    <div class="dropdown" dropdown [dropdownToggle]="false">
+            <button class="btn btn-primary" dropdown-open>{{ country }}</button>
             <ul class="dropdown-menu">
-                <li><a>Badman</a></li>
-                <li><a>Sadman</a></li>
-                <li><a>Lieman</a></li>
+                <li *ngFor="let country of countries">{{ country }}</li>
             </ul>
         </div>
 </form>

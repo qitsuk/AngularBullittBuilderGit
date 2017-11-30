@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import * as $ from 'jquery';
@@ -20,6 +20,7 @@ import { AccessoriesComponent } from './accessories.component';
 import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
 import { OrderFormComponent } from './order-form.component';
+import { CountriesService } from './countries.service';
 
 import { routing } from './app.routing';
 
@@ -47,7 +48,7 @@ export const firebaseConfig = {
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [CountriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
