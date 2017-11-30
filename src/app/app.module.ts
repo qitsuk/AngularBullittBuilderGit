@@ -40,7 +40,7 @@ export const firebaseConfig = {
     AppComponent, WelcomeComponent, NotFoundComponent,
     FrameComponent, ColorComponent, DrivetrainComponent,
     CustomizeComponent, AccessoriesComponent, ExtrasComponent,
-    OverviewComponent, OrderFormComponent, Bike
+    OverviewComponent, OrderFormComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule,
@@ -49,7 +49,7 @@ export const firebaseConfig = {
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule
   ],
-  providers: [CountriesService],
+  providers: [CountriesService, Bike],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
