@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
@@ -47,7 +47,7 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule,
-    routing, NgxCarouselModule,
+    routing, NgxCarouselModule, ReactiveFormsModule,
     DropdownModule
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule
