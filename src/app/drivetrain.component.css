@@ -1,21 +1,16 @@
 h1 {
-  text-align: center;
-}
-
-.col-sm-6-left {
-  display: flex;              /* establish flex container */
-  justify-content: center;    /* center items vertically, in this case */
-  align-items: center; 
+  text-align: center !important;
 }
 
 .radio {
   display:inline-block;
   width:auto;
-  height: 200px; 
-  margin: 15px;
+  height: 200px;
+  margin-right: 50px;
 }
 .componentimg{
   height: 150px;
+  width: 220px;
 
   display:block;
   margin: auto;

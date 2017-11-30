@@ -1,3 +1,6 @@
+h1 {
+    text-align: center !important;
+  }
 
 .col-sm-6.handle {
     display: inline-block;
@@ -9,6 +12,9 @@
     width: 50%;
 }
 
+.checkbox-saddles, .checkbox-seatposts, .checkbox-handlebars {
+    margin-bottom: 15px;
+}
 
 #previousButton {
     position: fixed;
