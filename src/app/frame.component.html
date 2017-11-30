@@ -13,7 +13,11 @@
                     <div class='col-sm-4 ' >
                     <img src='../assets/full-bike.png' class='imgbikewizard' >
                     <div class='radio'>
-                        <label><input type='radio'  name='fullbike' value=''>Fullbike</label> 
+                        <label><input type='radio'  name='frame' value="1438"
+                                [checked]="idx === 0" 
+                                [value]="bike.frame" 
+                                (change)="onSelectionChange('Full Bike', '1438')">
+                            Fullbike</label> 
                     </div>
                         Full Bike
                         If you are buying a Full bike, everything to ride safely and securely is included;
@@ -25,7 +29,11 @@
                     <img src='../assets/framekit.png' class='imgbikewizard'>
 
                     <div class='radio'>
-                        <label><input type='radio' name='framekit'>Framekit</label> 
+                        <label><input type='radio' name='frame' value="1438"
+                                [checked]="idx === 0" 
+                                [value]="bike.frame" 
+                                (change)="onSelectionChange('Framekit', '1438')">
+                            Framekit</label> 
                     </div> 
                         Framekit
                         If you have bought a Bullitt frame, here's what to expect; An aluminium frame, 
@@ -38,7 +46,11 @@
                     <div class='col-sm-4'>
                     <img src='../assets/stepsebullet.png' class='imgbikewizard'>
                     <div class='radio'>
-                        <label><input type='radio' name='ebullitt'>Steps EBullit Full Bike</label> 
+                        <label><input type='radio' name='frame' value="3642"
+                                [checked]="idx === 0" 
+                                [value]="bike.frame" 
+                                (change)="onSelectionChange('ebullitt', '3642')">
+                                Steps EBullit Full Bike</label> 
                     </div>
                     The STePS eBullitt system includes a 250W, 36-volt electric drive unit, or motor, that will help get you up to speed, 
                     but cuts out at 15.5mph (25km/h). You can go faster than that if you want but any speeds over 15.5mph have to be 
