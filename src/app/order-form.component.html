@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="dropdown" dropdown [dropdownToggle]="false">
+    <div class="dropdown" dropdown [dropdownToggle]="false" data-container="body">
             <button class="btn btn-primary" dropdown-open>{{ country }}</button>
             <ul class="dropdown-menu">
                 <li *ngFor="let country of countries">{{ country }}</li>
