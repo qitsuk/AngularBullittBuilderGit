@@ -6,7 +6,6 @@ h1 {
   display: flex;              /* establish flex container */
   justify-content: center;    /* center items vertically, in this case */
   align-items: center; 
-
 }
 
 .radio {
