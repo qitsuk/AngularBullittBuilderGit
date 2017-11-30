@@ -13,10 +13,11 @@ import { BikeComponent } from './bike.component';
 })
 
 export class AppComponent implements OnInit {
+  customize: Array<string> = new Array<string>();
   nextDisabled = false;
   prevDisabled = true;
   loaded = false;
-  totalPrice;
+  totalPrice = 0;
   id = '0';
 
   constructor(private _router: Router, /* private _db: AngularFireDatabase*/) {

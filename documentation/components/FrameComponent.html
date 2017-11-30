@@ -597,8 +597,8 @@ export class FrameComponent {
     submit() {
         this._router.navigate([&#x27;color&#x27;]);
         this._ac.updateProgressBar(20);
-        this.bike.totalPrice &#x3D; this.price;
         this.bike.frame &#x3D; this.frame;
+        this._ac.totalPrice +&#x3D; this.price;
     }
     back() {
         this._router.navigate([&#x27;&#x27;]);

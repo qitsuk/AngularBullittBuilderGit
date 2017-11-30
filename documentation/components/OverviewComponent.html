@@ -421,7 +421,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, _router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>, _ac: AppComponent)</code>
+                            <code>constructor(fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, _router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>, _ac: AppComponent, bike: <a href="../injectables/BikeComponent.html" >BikeComponent</a>)</code>
                         </td>
                     </tr>
     
@@ -487,6 +487,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> bike</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>bike:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> form</b>
                         </td>
                     </tr>
@@ -513,6 +528,21 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> overviewString</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>overviewString:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
@@ -520,6 +550,7 @@
 import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
+import { BikeComponent } from &#x27;./bike.component&#x27;;
 
 @Component({
     selector: &#x27;app-overview-component&#x27;,
@@ -529,8 +560,12 @@ import { AppComponent } from &#x27;./app.component&#x27;;
 
 export class OverviewComponent {
     form; FormGroup;
-    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent) {
+    bike;
+    overviewString;
+    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent, bike: BikeComponent) {
         this.form &#x3D; fb.group({});
+        this.bike &#x3D; bike;
+        this.overviewString &#x3D; this.bike.toString();
     }
     submit() {
         this._router.navigate([&#x27;orderform&#x27;]);

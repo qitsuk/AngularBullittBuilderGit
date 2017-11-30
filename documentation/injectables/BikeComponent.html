@@ -552,9 +552,9 @@ export class BikeComponent {
     frame: string;
     color: string;
     drivetrain: string;
-    customize: Array&lt;string&gt;;
-    accessories: Array&lt;string&gt;;
-    extras: Array&lt;string&gt;;
+    customize: Array&lt;string&gt; &#x3D; new Array&lt;string&gt;();
+    accessories: Array&lt;string&gt; &#x3D; new Array&lt;string&gt;();
+    extras: Array&lt;string&gt; &#x3D; new Array&lt;string&gt;();
     totalPrice &#x3D; 0;
 
     rs &#x3D; &#x27;Your order&#x27;;
@@ -570,16 +570,22 @@ export class BikeComponent {
             this.rs +&#x3D; &#x27;\nDrivetrain: &#x27; + this.drivetrain;
         }
         if (this.customize) {
-            this.rs +&#x3D; &#x27;\nCustom options: &#x27; + this.customize.length;
+            this.rs +&#x3D; &#x27;\nCustom options: &#x27;;
+            for (let i &#x3D; 0; i &lt; this.customize.length; i++) {
+                this.rs +&#x3D; &#x27;\n&#x27; + this.customize[i] + &#x27;\n&#x27;;
+            }
         }
         if (this.accessories) {
-            this.rs +&#x3D; &#x27;\nAccessories: &#x27; + this.accessories.length;
+            this.rs +&#x3D; &#x27;\nAccessories: &#x27;;
+            for (let i &#x3D; 0; i &lt; this.accessories.length; i++) {
+                this.rs +&#x3D; &#x27;\n&#x27; + this.accessories[i] + &#x27;\n&#x27;;
+            }
         }
         if (this.extras) {
-            this.rs +&#x3D; &#x27;\nExtras: &#x27; + this.extras.length;
-        }
-        if (this.totalPrice) {
-            this.rs +&#x3D; &#x27;\nTotal Price: €&#x27; + this.totalPrice;
+            this.rs +&#x3D; &#x27;\nExtras: &#x27;;
+            for (let i &#x3D; 0; i &lt; this.extras.length; i++) {
+                this.rs +&#x3D; &#x27;\n&#x27; + this.extras[i] + &#x27;\n&#x27;;
+            }
         }
         return this.rs;
     }

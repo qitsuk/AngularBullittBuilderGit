@@ -463,6 +463,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> customize</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>customize:     <code>string[]</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> id</b>
                         </td>
                     </tr>
@@ -548,10 +563,15 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>totalPrice:     <code>any</code>
+                            <code>totalPrice:     <code>number</code>
     </bcode>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value: </i><code>0</code>
+                            </td>
+                        </tr>
                 </tbody>
             </table>
     </section>
@@ -572,10 +592,11 @@ import { BikeComponent } from &#x27;./bike.component&#x27;;
 })
 
 export class AppComponent implements OnInit {
+  customize: Array&lt;string&gt; &#x3D; new Array&lt;string&gt;();
   nextDisabled &#x3D; false;
   prevDisabled &#x3D; true;
   loaded &#x3D; false;
-  totalPrice;
+  totalPrice &#x3D; 0;
   id &#x3D; &#x27;0&#x27;;
 
   constructor(private _router: Router, /* private _db: AngularFireDatabase*/) {

@@ -487,6 +487,66 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> b17black</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>b17black:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> b17brown</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>b17brown:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> b67black</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>b67black:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> b67brown</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>b67brown:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> bike</b>
                         </td>
                     </tr>
@@ -502,12 +562,27 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> customize</b>
+                            <b> cruiser</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>customize:     <code>any</code>
+                            <code>cruiser:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> flatbar</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>flatbar:     <code>boolean</code>
     </bcode>
                         </td>
                     </tr>
@@ -532,12 +607,102 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> long</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>long:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> price</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
                             <code>price:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> raceblack</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>raceblack:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> racewhite</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>racewhite:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> riserbar</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>riserbar:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> short</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>short:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> thomson</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>thomson:     <code>boolean</code>
     </bcode>
                         </td>
                     </tr>
@@ -562,13 +727,75 @@ export class CustomizeComponent {
     form: FormGroup;
     bike;
     price;
-    customize;
+    riserbar: boolean;
+    flatbar: boolean;
+    cruiser: boolean;
+    short: boolean;
+    long: boolean;
+    thomson: boolean;
+    raceblack: boolean;
+    racewhite: boolean;
+    b17brown: boolean;
+    b17black: boolean;
+    b67brown: boolean;
+    b67black: boolean;
+
+
+
+
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form &#x3D; fb.group({});
         this.bike &#x3D; bike;
-        console.log(this.bike.totalPrice);
     }
     submit() {
+        if (this.riserbar) {
+            this.bike.customize.push(&#x27;Riserbar Handlebars&#x27;);
+            this._ac.totalPrice +&#x3D; 26;
+        }
+        if (this.flatbar) {
+            this.bike.customize.push(&#x27;Flatbar Handlebars&#x27;);
+            this._ac.totalPrice +&#x3D; 26;
+        }
+        if (this.cruiser) {
+            this.bike.customize.push(&#x27;Cruiser Handlebars&#x27;);
+            this._ac.totalPrice +&#x3D; 26;
+        }
+        if (this.short) {
+            this.bike.customize.push(&#x27;Short Seatpost&#x27;);
+            this._ac.totalPrice +&#x3D; 42;
+        }
+        if (this.long) {
+            this.bike.customize.push(&#x27;Long Seatpost&#x27;);
+            this._ac.totalPrice +&#x3D; 42;
+        }
+        if (this.thomson) {
+            this.bike.customize.push(&#x27;Thomson Elite Seatpost&#x27;);
+            this._ac.totalPrice +&#x3D; 75;
+        }
+        if (this.raceblack) {
+            this.bike.customize.push(&#x27;Race Black Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 54;
+        }
+        if (this.racewhite) {
+            this.bike.customize.push(&#x27;Race White Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 54;
+        }
+        if (this.b17brown) {
+            this.bike.customize.push(&#x27;Brooks B17, Brown Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 114;
+        }
+        if (this.b17black) {
+            this.bike.customize.push(&#x27;Brooks B17, Black Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 114;
+        }
+        if (this.b67brown) {
+            this.bike.customize.push(&#x27;Brooks B67, Brown Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 125;
+        }
+        if (this.b67black) {
+            this.bike.customize.push(&#x27;Brooks B67, Black Saddle&#x27;);
+            this._ac.totalPrice +&#x3D; 125;
+        }
         this._router.navigate([&#x27;accessories&#x27;]);
         this._ac.updateProgressBar(50);
     }

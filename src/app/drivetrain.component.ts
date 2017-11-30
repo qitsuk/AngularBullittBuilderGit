@@ -24,6 +24,7 @@ export class DrivetrainComponent {
         this._router.navigate(['customize']);
         this._ac.updateProgressBar(40);
         this.bike.totalPrice += this.price;
+        this._ac.totalPrice += this.price;
     }
     back() {
         this._router.navigate(['color']);

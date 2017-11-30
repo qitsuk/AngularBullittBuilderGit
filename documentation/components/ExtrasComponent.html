@@ -421,7 +421,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, _router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>, _ac: AppComponent)</code>
+                            <code>constructor(fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, _router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>, _ac: AppComponent, bike: <a href="../injectables/BikeComponent.html" >BikeComponent</a>)</code>
                         </td>
                     </tr>
     
@@ -487,12 +487,132 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> bike</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>bike:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> bordo</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>bordo:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> dynamo</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>dynamo:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> form</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
                             <code>form:     <code><a href="https://angular.io/docs/ts/latest/api/forms/index/FormGroup-class.html" target="_blank" >FormGroup</a></code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> granite1</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>granite1:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> granite2</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>granite2:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> ivy</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>ivy:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> kickstand</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>kickstand:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> reelights</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>reelights:     <code>boolean</code>
     </bcode>
                         </td>
                     </tr>
@@ -505,6 +625,7 @@
 import { FormGroup, FormBuilder } from &#x27;@angular/forms&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
+import { BikeComponent } from &#x27;./bike.component&#x27;;
 
 @Component({
     selector: &#x27;app-extras-component&#x27;,
@@ -514,11 +635,49 @@ import { AppComponent } from &#x27;./app.component&#x27;;
 
 export class ExtrasComponent {
     form: FormGroup;
+    bike;
+    dynamo: boolean;
+    reelights: boolean;
+    kickstand: boolean;
+    granite1: boolean;
+    granite2: boolean;
+    ivy: boolean;
+    bordo: boolean;
 
-    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent) {
+
+    constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent, bike: BikeComponent) {
         this.form &#x3D; fb.group({});
+        this.bike &#x3D; bike;
     }
     submit() {
+        if (this.dynamo) {
+            this.bike.extras.push(&#x27;DYNAMO 20\&quot; FRONT WHEEL (ALFINE/ALEX DM24)&#x27;);
+            this._ac.totalPrice +&#x3D; 166;
+        }
+        if (this.reelights) {
+            this.bike.extras.push(&#x27;REELIGHTS&#x27;);
+            this._ac.totalPrice +&#x3D; 76;
+        }
+        if (this.kickstand) {
+            this.bike.extras.push(&#x27;CROMO KICKSTAND&#x27;);
+            this._ac.totalPrice +&#x3D; 102;
+        }
+        if (this.granite1) {
+            this.bike.extras.push(&#x27;ABUS 5400 GRANITE U-LOCK&#x27;);
+            this._ac.totalPrice +&#x3D; 145;
+        }
+        if (this.granite2) {
+            this.bike.extras.push(&#x27;ABUS BORDO 6500 GRANIT X PLUS&#x27;);
+            this._ac.totalPrice +&#x3D; 131;
+        }
+        if (this.ivy) {
+            this.bike.extras.push(&#x27;ABUS 9100 IVY CHAIN LOCK&#x27;);
+            this._ac.totalPrice +&#x3D; 131;
+        }
+        if (this.bordo) {
+            this.bike.extras.push(&#x27;ABUS BORDO + DETECTO 8077 ALARM&#x27;);
+            this._ac.totalPrice +&#x3D; 319;
+        }
         this._router.navigate([&#x27;overview&#x27;]);
         this._ac.updateProgressBar(70);
     }

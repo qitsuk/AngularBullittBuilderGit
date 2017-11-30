@@ -10,9 +10,9 @@ export class BikeComponent {
     frame: string;
     color: string;
     drivetrain: string;
-    customize: Array<string>;
-    accessories: Array<string>;
-    extras: Array<string>;
+    customize: Array<string> = new Array<string>();
+    accessories: Array<string> = new Array<string>();
+    extras: Array<string> = new Array<string>();
     totalPrice = 0;
 
     rs = 'Your order';
@@ -28,16 +28,22 @@ export class BikeComponent {
             this.rs += '\nDrivetrain: ' + this.drivetrain;
         }
         if (this.customize) {
-            this.rs += '\nCustom options: ' + this.customize.length;
+            this.rs += '\nCustom options: ';
+            for (let i = 0; i < this.customize.length; i++) {
+                this.rs += '\n' + this.customize[i] + '\n';
+            }
         }
         if (this.accessories) {
-            this.rs += '\nAccessories: ' + this.accessories.length;
+            this.rs += '\nAccessories: ';
+            for (let i = 0; i < this.accessories.length; i++) {
+                this.rs += '\n' + this.accessories[i] + '\n';
+            }
         }
         if (this.extras) {
-            this.rs += '\nExtras: ' + this.extras.length;
-        }
-        if (this.totalPrice) {
-            this.rs += '\nTotal Price: €' + this.totalPrice;
+            this.rs += '\nExtras: ';
+            for (let i = 0; i < this.extras.length; i++) {
+                this.rs += '\n' + this.extras[i] + '\n';
+            }
         }
         return this.rs;
     }

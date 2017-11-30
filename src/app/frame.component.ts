@@ -25,8 +25,8 @@ export class FrameComponent {
     submit() {
         this._router.navigate(['color']);
         this._ac.updateProgressBar(20);
-        this.bike.totalPrice = this.price;
         this.bike.frame = this.frame;
+        this._ac.totalPrice += this.price;
     }
     back() {
         this._router.navigate(['']);

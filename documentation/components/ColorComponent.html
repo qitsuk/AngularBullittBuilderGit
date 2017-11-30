@@ -575,7 +575,6 @@ export class ColorComponent {
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form &#x3D; fb.group({});
         this.bike &#x3D; bike;
-        console.log(this.bike.totalPrice);
     }
     submit() {
         this._router.navigate([&#x27;drivetrain&#x27;]);
