@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
+import { Bike } from './bike';
 
 @Component ({
     selector: 'app-frame-component',
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
 
 export class FrameComponent {
     form: FormGroup;
+    bike = new Bike();
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder) {
         this.form = fb.group({
             framekit: ['', Validators.required]

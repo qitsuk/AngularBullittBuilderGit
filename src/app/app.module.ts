@@ -21,6 +21,7 @@ import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
 import { OrderFormComponent } from './order-form.component';
 import { CountriesService } from './countries.service';
+import { Bike } from './bike';
 
 import { routing } from './app.routing';
 
@@ -48,7 +49,7 @@ export const firebaseConfig = {
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule
   ],
-  providers: [CountriesService],
+  providers: [CountriesService, Bike],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
