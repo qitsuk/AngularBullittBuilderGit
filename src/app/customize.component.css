@@ -1,11 +1,12 @@
-#infotext {
-    width: 600px;
-    margin: auto;
-  }
 
- .col-centered{
-float: none;
-margin: 0 auto;
+.col-sm-6.handle {
+    display: inline-block;
+    width: 50%;
+}
+
+.col-sm-6.seat {
+    display: inline-block;
+    width: 50%;
 }
 
 
