@@ -2,6 +2,10 @@ h1 {
     text-align: center !important;
   }
 
+  label {
+      font-weight: normal;
+  }
+
 .col-sm-6.handle {
     display: inline-block;
     width: 50%;
