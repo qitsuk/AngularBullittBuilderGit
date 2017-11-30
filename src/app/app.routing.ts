@@ -11,6 +11,8 @@ import { AccessoriesComponent } from './accessories.component';
 import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
 import { OrderFormComponent } from './order-form.component';
+import { DoneComponent } from './done.component';
+import { OrderConfirmationComponent } from './order-confirmation.component';
 
 export const routing = RouterModule.forRoot([
     { path: '', component: WelcomeComponent },
@@ -22,5 +24,7 @@ export const routing = RouterModule.forRoot([
     { path: 'extras', component: ExtrasComponent},
     { path: 'overview', component: OverviewComponent},
     { path: 'orderform', component: OrderFormComponent },
+    { path: 'orderconfirmation', component: OrderConfirmationComponent},
+    { path: 'done', component: DoneComponent},
     { path: '**', component: NotFoundComponent }
 ]);

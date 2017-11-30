@@ -1,0 +1,14 @@
+<body>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+      
+            <button id="previousButton"  class="btn btn-primary" value="Previous" (click)="back()">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+  
+            <button id="nextButton"  class="btn btn-primary" value="Start" type="submit">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+    </form>
+</body>

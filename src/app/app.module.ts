@@ -21,6 +21,8 @@ import { ExtrasComponent } from './extras.component';
 import { OverviewComponent } from './overview.component';
 import { OrderFormComponent } from './order-form.component';
 import { CountriesService } from './countries.service';
+import { DoneComponent } from './done.component';
+import { OrderConfirmationComponent } from './order-confirmation.component';
 import { BikeComponent } from './bike.component';
 
 import { routing } from './app.routing';
@@ -40,7 +42,8 @@ export const firebaseConfig = {
     AppComponent, WelcomeComponent, NotFoundComponent,
     FrameComponent, ColorComponent, DrivetrainComponent,
     CustomizeComponent, AccessoriesComponent, ExtrasComponent,
-    OverviewComponent, OrderFormComponent, BikeComponent
+    OverviewComponent, OrderFormComponent, BikeComponent,
+    DoneComponent, OrderConfirmationComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule,
