@@ -19,6 +19,7 @@ export class AccessoriesComponent {
     bbxPrice;
     billboard;
     bbPrice;
+    idx;
 
     canopy: boolean;
     damper: boolean;

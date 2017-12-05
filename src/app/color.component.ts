@@ -14,6 +14,7 @@ export class ColorComponent {
     form: FormGroup;
     bike;
     color;
+    idx;
 
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});

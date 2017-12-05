@@ -15,6 +15,8 @@ export class FrameComponent {
     frame: string;
     price: number;
     bike;
+    idx;
+
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({
             framekit: ['', Validators.required]

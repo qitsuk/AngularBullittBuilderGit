@@ -556,6 +556,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <b> idx</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>idx:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <b> price</b>
                         </td>
                     </tr>
@@ -587,6 +602,8 @@ export class DrivetrainComponent {
     bike;
     drivetrain;
     price;
+    idx;
+
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form &#x3D; fb.group({});
         this.bike &#x3D; bike;

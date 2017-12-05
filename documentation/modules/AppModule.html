@@ -465,7 +465,7 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre><code class="hljs javascript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
-import { FormsModule } from &#x27;@angular/forms&#x27;;
+import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 import { HttpModule, Http } from &#x27;@angular/http&#x27;;
 import { NgxCarouselModule } from &#x27;ngx-carousel&#x27;;
 import &#x27;hammerjs&#x27;;
@@ -512,7 +512,7 @@ export const firebaseConfig &#x3D; {
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule,
-    routing, NgxCarouselModule,
+    routing, NgxCarouselModule, ReactiveFormsModule,
     DropdownModule
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule

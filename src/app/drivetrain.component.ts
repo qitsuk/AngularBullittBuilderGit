@@ -15,6 +15,8 @@ export class DrivetrainComponent {
     bike;
     drivetrain;
     price;
+    idx;
+
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
         this.bike = bike;
