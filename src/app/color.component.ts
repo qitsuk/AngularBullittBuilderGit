@@ -28,6 +28,7 @@ export class ColorComponent {
     back() {
         this._router.navigate(['frame']);
         this._ac.updateProgressBar(10);
+        this._ac.totalPrice = this._ac.totalPrice;
     }
     onSelectionChange(selection) {
         this.color = selection;

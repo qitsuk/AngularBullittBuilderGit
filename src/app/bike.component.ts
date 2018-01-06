@@ -8,8 +8,10 @@ import { Injectable, Component } from '@angular/core';
 @Injectable()
 export class BikeComponent {
     frame: string;
+    framePrice: number;
     color: string;
     drivetrain: string;
+    drivetrainPrice: number;
     customize: Array<string> = new Array<string>();
     accessories: Array<string> = new Array<string>();
     extras: Array<string> = new Array<string>();

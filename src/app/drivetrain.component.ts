@@ -21,20 +21,21 @@ export class DrivetrainComponent {
         this.form = fb.group({});
         this.bike = bike;
         console.log(this.bike.totalPrice);
+        console.log(this.bike.toString());
     }
     submit() {
         this._router.navigate(['customize']);
         this._ac.updateProgressBar(40);
-        this.bike.totalPrice += this.price;
-        this._ac.totalPrice += this.price;
     }
     back() {
         this._router.navigate(['color']);
         this._ac.updateProgressBar(20);
     }
     onSelectionChange(drivetrain, price) {
-        this.drivetrain = drivetrain;
-        this.price = price;
+        this.bike.drivetrain = drivetrain;
+        this._ac.totalPrice += price;
+        this.bike.totalPrice += this.price;
+        this.bike.drivetrainPrice = this.price;
         console.log(price);
     }
 }
