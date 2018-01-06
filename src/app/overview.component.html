@@ -13,7 +13,9 @@
             Here you can check off things if you have regret or do not want to buy them.<br>
             If everything seems like it is in order, then just click next and go to the payment site.
         </p>
-        <p>{{ overviewString }}</p>
+        <div *ngFor="let o of overviewArray">
+            <p>{{ o  }}</p>
+        </div>
     </div>
 </form>
 </body>
