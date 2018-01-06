@@ -13,11 +13,11 @@ import { BikeComponent } from './bike.component';
 export class OverviewComponent {
     form; FormGroup;
     bike;
-    overviewString;
+    overviewArray;
     constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent, bike: BikeComponent) {
         this.form = fb.group({});
         this.bike = bike;
-        this.overviewString = this.bike.toString();
+        this.overviewArray = this.bike.toString();
     }
     submit() {
         this._router.navigate(['orderform']);

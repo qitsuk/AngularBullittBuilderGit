@@ -31,7 +31,18 @@ body{
     background-color:rgb(249, 249, 249);
     min-height:1000px;
 }
-.progress{
+.progress {
     margin-left:110px;
     margin-right:110px;
+}
+
+.totalPrice {
+    display: block;
+    clear: both;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin-right: 150px;
+    margin-bottom: 250px;
+    font-size: 1.5em;
 }

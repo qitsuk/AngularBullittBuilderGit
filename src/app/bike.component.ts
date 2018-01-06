@@ -13,38 +13,39 @@ export class BikeComponent {
     customize: Array<string> = new Array<string>();
     accessories: Array<string> = new Array<string>();
     extras: Array<string> = new Array<string>();
+    allParts: Array<string> = new Array<string>();
     totalPrice = 0;
 
-    rs = 'Your order';
-
     toString() {
+        this.allParts.push('Your Order: ');
         if (this.frame) {
-            this.rs += '\nSelected Frame: ' + this.frame;
+            this.allParts.push(this.frame);
         }
         if (this.color) {
-            this.rs += '\nColor: ' + this.color;
+            this.allParts.push('Color: ');
+            this.allParts.push(this.color);
         }
         if (this.drivetrain) {
-            this.rs += '\nDrivetrain: ' + this.drivetrain;
+            this.allParts.push(this.drivetrain);
         }
         if (this.customize) {
-            this.rs += '\nCustom options: ';
+            this.allParts.push('Custom Options: ');
             for (let i = 0; i < this.customize.length; i++) {
-                this.rs += '\n' + this.customize[i] + '\n';
+                this.allParts.push(this.customize[i]);
             }
         }
         if (this.accessories) {
-            this.rs += '\nAccessories: ';
+            this.allParts.push('Accessories: ');
             for (let i = 0; i < this.accessories.length; i++) {
-                this.rs += '\n' + this.accessories[i] + '\n';
+                this.allParts.push(this.accessories[i]);
             }
         }
         if (this.extras) {
-            this.rs += '\nExtras: ';
+            this.allParts.push('Extras: ');
             for (let i = 0; i < this.extras.length; i++) {
-                this.rs += '\n' + this.extras[i] + '\n';
+                this.allParts.push(this.extras[i]);
             }
         }
-        return this.rs;
+        return this.allParts;
     }
 }
