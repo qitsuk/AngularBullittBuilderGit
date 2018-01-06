@@ -29,6 +29,7 @@ export class OrderFormComponent implements OnInit {
     submit() {
         this._router.navigate(['orderconfirmation']);
         this._ac.updateProgressBar(90);
+        alert('Please check your email, for a payment link.');
     }
 
     back() {

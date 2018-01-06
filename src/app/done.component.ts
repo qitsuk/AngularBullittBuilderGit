@@ -15,6 +15,11 @@ export class DoneComponent {
     constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent) {
         this.form = fb.group({});
     }
+
+    submit() {
+        window.location.href = 'www.qitsuk.dk';
+    }
+
     back() {
         this._router.navigate(['orderconfirmation']);
         this._ac.updateProgressBar(90);

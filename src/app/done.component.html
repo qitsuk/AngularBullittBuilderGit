@@ -1,10 +1,15 @@
 <body>
     <form [formGroup]="form">
       <div class='wrapper'>
-          <button id="previousButton"  class="btn btn-primary" value="Previous" type="submit" (click)="back()">
+          <button id="previousButton"  class="btn btn-primary" value="Previous" (click)="back()">
               <span class="glyphicon glyphicon-chevron-left"></span>
            </button>
-          <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" [disabled]="true">
+           <h1>Step 10 - You are all set.</h1>
+           <p>
+               Congratulations. You are completely done. Here are some other things <br>
+               you might find interesting: 
+           </p>
+          <button id="nextButton" id="nextButton" class="btn btn-primary" value="Next" type="submit" (click)="submit()" [disabled]="false">
               <span class="glyphicon glyphicon-chevron-right"></span>
           </button>
       </div>

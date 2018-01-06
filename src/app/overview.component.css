@@ -39,8 +39,11 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
-body{
+body {
+    background-color:rgb(249, 249, 249);
+    min-height:900px;
+    margin:auto;
+    text-align: center !important;
     padding-left:110px;
     padding-right:110px;
-    background-color:rgb(249, 249, 249);
-  }
+}

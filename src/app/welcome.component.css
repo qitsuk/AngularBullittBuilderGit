@@ -108,3 +108,9 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
+body {
+    background-color:rgb(249, 249, 249);
+    min-height:900px;
+    margin:auto;
+    text-align: center !important;
+}

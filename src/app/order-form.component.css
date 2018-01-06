@@ -44,3 +44,9 @@ body{
 .form-group{
     padding:15px;
 }
+body {
+    background-color:rgb(249, 249, 249);
+    min-height:900px;
+    margin:auto;
+    text-align: center !important;
+}
