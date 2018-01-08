@@ -28,19 +28,19 @@
             <h3> Handlebars </h3>  
             <div class='checkbox-handlebars'> 
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/h/a/handlebarriser3.jpg' class='imgbikewizard'>   
-                    <label><input type='checkbox' [(ngModel)]="riserbar" [ngModelOptions]="{standalone: true}" value=''> Riserbar <br> +€26.00</label> 
+                    <label><input type='checkbox' (change)="riserbarchanged()" [(ngModel)]="riserbar" [ngModelOptions]="{standalone: true}" value=''> Riserbar <br> +€26.00</label> 
                 <span class="productspan">Alloy bar 620mm wide, 30mm rise. 31.8 clamp.</span> 
             </div>   
 
             <div class='checkbox-handlebars'>   
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/h/a/handlebarflat1.jpg' class='imgbikewizard'>   
-                    <label><input type='checkbox' [(ngModel)]="flatbar" [ngModelOptions]="{standalone: true}" value=''> Flatbar <br> +€26.00</label> 
+                    <label><input type='checkbox' (change)="flatbarchanged()" [(ngModel)]="flatbar" [ngModelOptions]="{standalone: true}" value=''> Flatbar <br> +€26.00</label> 
                 <span class="productspan">Alloy bar, 580mm wide, 9 degress of sweepback. 31.8 clamp</span>    
             </div>   
 
             <div class='checkbox-handlebars'>   
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/c/r/cruiser_bar.jpg' class='imgbikewizard'>   
-                    <label><input type='checkbox' [(ngModel)]="cruiser" [ngModelOptions]="{standalone: true}" value=''> Cruiser <br> +€26.00</label>  
+                    <label><input type='checkbox' (change)="cruiserchanged()" [(ngModel)]="cruiser" [ngModelOptions]="{standalone: true}" value=''> Cruiser <br> +€26.00</label>  
                 <span class="productspan">Nice, sweptback bar for gentlemanly cruising. Places the rider upright. 600Mm wide with a 70mm rise, 31.8 clamp</span>  
             </div>  
         </div>   
@@ -53,19 +53,19 @@
                     </span></h3>  
             <div class='checkbox-seatposts'>   
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/s/e/seatpost1.jpg' class='imgbikewizard'>   
-                    <label><input type='checkbox' [(ngModel)]="short" [ngModelOptions]="{standalone: true}"  value=''> Short <br> +€42.00</label> 
+                    <label><input type='checkbox' (change)="shortchanged()" [(ngModel)]="short" [ngModelOptions]="{standalone: true}"  value=''> Short <br> +€42.00</label> 
                 <span class="productspan">Seatpost, 350 mm</span> 
             </div>   
 
             <div class='checkbox-seatposts'>   
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/l/o/longseatpost3_1.jpg' class='imgbikewizard'>   
-                    <label><input type='checkbox' [(ngModel)]="long" [ngModelOptions]="{standalone: true}" value=''> Seatpost-Long <br> +€42.00</label>  
+                    <label><input type='checkbox' (change)="longchanged()" [(ngModel)]="long" [ngModelOptions]="{standalone: true}" value=''> Seatpost-Long <br> +€42.00</label>  
                 <span class="productspan">31.6 diameter, a perfect fit for your Bullitt. If you need an extra couple of centimetres in height, you should try a longer seatpost. Buy red if you want to go faster. 400mm</span>
             </div>  
 
             <div class='checkbox-seatposts'>   
                     <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/t/h/thomson_sadelpind.jpg'class='imgbikewizard'>     
-                <label><input type='checkbox' [(ngModel)]="thomson" [ngModelOptions]="{standalone: true}" value=''> Thomson Elite Seatpost <br> +€75.00</label>
+                <label><input type='checkbox' (change)="thomsonchanged()" [(ngModel)]="thomson" [ngModelOptions]="{standalone: true}" value=''> Thomson Elite Seatpost <br> +€75.00</label>
                 <span class="productspan">The Thomson Elite seatpost is the standard by which all other seatposts are judged. Forged clamps, integrally machined head, and an elliptically extruded 7000 series aluminum body have made the Elite and the Setback Elite the industry models for strength and ease of adjustment. 410mm length , 31.6mm diameter.</span>
             </div>  
             
@@ -75,37 +75,37 @@
             <h3> Saddles </h3>  
             <div class='checkbox-saddles'>  
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/s/a/saddleraceblack010.jpg' class='imgbikewizard'>
-                <label><input type='checkbox' [(ngModel)]="raceblack" [ngModelOptions]="{standalone: true}" value=''> Race Black <br> +€54.00</label>  
+                <label><input type='checkbox' (change)="raceblackchanged()" [(ngModel)]="raceblack" [ngModelOptions]="{standalone: true}" value=''> Race Black <br> +€54.00</label>  
                 <span class="productspan">A slimmer saddle with a long nose for those used to more sport orientated bikes. 28Cm long, 13cm wide. Use a 6mm allen key for for/aft adjustment.</span> 
             </div>
 
             <div class='checkbox-saddles'>   
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/s/a/saddleracewhite009.jpg' class='imgbikewizard'>   
-                <label><input type='checkbox' [(ngModel)]="racewhite" [ngModelOptions]="{standalone: true}" value=''> Race White <br> +€54.00</label>   
+                <label><input type='checkbox' (change)="racewhitechanged()" [(ngModel)]="racewhite" [ngModelOptions]="{standalone: true}" value=''> Race White <br> +€54.00</label>   
                 <span class="productspan">A slimmer saddle with a long nose for those used to more sport orientated bikes. 28Cm long, 13cm wide. Use a 6mm allen key for for/aft adjustment.</span>
             </div>   
 
             <div class='checkbox-saddles'>   
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/b/1/b17_standard-brown_w800_h600_vamiddle_jc95.jpg' class='imgbikewizard'>   
-                <label><input type='checkbox' [(ngModel)]="b17brown" [ngModelOptions]="{standalone: true}" value=''> Brooks B17, Brown <br> +€114.00</label>  
+                <label><input type='checkbox' (change)="b17brownchanged()" [(ngModel)]="b17brown" [ngModelOptions]="{standalone: true}" value=''> Brooks B17, Brown <br> +€114.00</label>  
                 <span class="productspan">Lovely and comfortable, leather saddle. Made in the green and rolling pastures of jolly England, the Brooks B17 has been used for generations for touring and general use and just gets better with age. It takes a bit of breaking-in, but before long you will have a saddle perfectly formed to your bum.</span>
             </div>   
 
             <div class='checkbox-saddles'>   
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/b/1/b17_standard_black_1_w800_h600_vamiddle_jc95_1.jpg' class='imgbikewizard'>   
-                <label><input type='checkbox' [(ngModel)]="b17black" [ngModelOptions]="{standalone: true}" value=''> Brooks B17, Black <br> +€114.00 </label> 
+                <label><input type='checkbox' (change)="b17blackchanged()" [(ngModel)]="b17black" [ngModelOptions]="{standalone: true}" value=''> Brooks B17, Black <br> +€114.00 </label> 
                 <span class="productspan">Lovely and comfortable, leather saddle. Made in the green and rolling pastures of jolly England, the Brooks B17 has been used for generations for touring and general use and just gets better with age. It takes a bit of breaking-in, but before long you will have a saddle perfectly formed to your bum.</span>  
             </div>   
 
             <div class='checkbox-saddles'>   
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/b/6/b67_brown_w800_h600_vamiddle_jc95.jpg' class='imgbikewizard'>   
-                <label><input type='checkbox' [(ngModel)]="b67brown" [ngModelOptions]="{standalone: true}" value=''> Brooks B67, Brown <br> +€125.00   </label> 
+                <label><input type='checkbox' (change)="b67brownchanged()" [(ngModel)]="b67brown" [ngModelOptions]="{standalone: true}" value=''> Brooks B67, Brown <br> +€125.00   </label> 
                 <span class="productspan">Lovely and comfortable, leather saddle. Made in the green and rolling pastures of jolly England, the Brooks B67 has been used for generations for touring and general use and just gets better with age. It takes a bit of breaking-in, but before long you will have a saddle perfectly formed to your bum.</span> 
             </div>   
 
             <div class='checkbox-saddles'>   
                 <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/b/6/b67_black_w375_h275_vamiddle_jc95_1.jpg' class='imgbikewizard'>   
-                <label><input type='checkbox' [(ngModel)]="b67black" [ngModelOptions]="{standalone: true}" value=''> Brooks B67, Black <br> +€125.00 </label>  
+                <label><input type='checkbox' (change)="b67blackchanged()" [(ngModel)]="b67black" [ngModelOptions]="{standalone: true}" value=''> Brooks B67, Black <br> +€125.00 </label>  
                 <span class="productspan">Lovely and comfortable, leather saddle. Made in the green and rolling pastures of jolly England, the Brooks B67 has been used for generations for touring and general use and just gets better with age. It takes a bit of breaking-in, but before long you will have a saddle perfectly formed to your bum.</span>
             </div>  
         </div>   

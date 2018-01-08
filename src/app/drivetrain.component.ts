@@ -14,8 +14,9 @@ export class DrivetrainComponent {
     form: FormGroup;
     bike;
     drivetrain;
-    price;
+    price = 0;
     idx;
+    prevPrice = 0;
 
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
@@ -32,10 +33,17 @@ export class DrivetrainComponent {
         this._ac.updateProgressBar(20);
     }
     onSelectionChange(drivetrain, price) {
-        this.bike.drivetrain = drivetrain;
-        this._ac.totalPrice += price;
-        this.bike.totalPrice += this.price;
-        this.bike.drivetrainPrice = this.price;
-        console.log(price);
+        if (this.prevPrice === 0 || this.prevPrice === NaN) {
+            this.prevPrice = price;
+            this.bike.drivetrain = drivetrain;
+            this._ac.totalPrice += price;
+            console.log(price, this.prevPrice);
+        } else {
+            this.bike.drivetrain = drivetrain;
+            this._ac.totalPrice = ((this._ac.totalPrice - this.prevPrice) + price);
+            this.bike.drivetrainPrice = this.price;
+            this.prevPrice = price;
+            console.log(price, this.prevPrice);
+        }
     }
 }
