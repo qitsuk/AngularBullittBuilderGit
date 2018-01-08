@@ -17,7 +17,7 @@ export class DoneComponent {
     }
 
     submit() {
-        window.location.href = 'www.qitsuk.dk';
+        document.location.href = 'www.qitsuk.dk';
     }
 
     back() {
