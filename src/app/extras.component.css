@@ -48,3 +48,88 @@ body{
   .imgbikewizard {
     width: 100px;
     margin: 25px; }
+
+
+
+span.seatspan-h3 {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 5px solid #DFDFDF;
+    color: #717171;
+    font-size: 13px;
+    width: 800px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: justify;
+    text-transform: initial;
+    display:none;
+    padding:0 20px;
+    z-index: 100;
+}
+
+span.seatspan-h3:after{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    width:10px;
+    height:10px;
+    border-bottom:5px solid #dfdfdf;
+    border-right:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:-5px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+h3:hover span.seatspan-h3{
+    display:block;
+}
+
+span.seatspan {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 5px solid #DFDFDF;
+    color: #717171;
+    font-size: 13px;
+    height: auto;
+    width: 450px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: justify;
+    text-transform: initial;
+    display:none;
+    padding:0 20px;
+    z-index: 100;
+}
+
+span.seatspan:after{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    width:10px;
+    height:10px;
+    border-bottom:5px solid #dfdfdf;
+    border-right:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:-5px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+h3:hover span.seatspan-h3{
+    display:block;
+}
+
+.checkbox:hover span.seatspan{
+    display:block;
+}
+
+.radio:hover span.seatspan{
+    display:block;
+}
