@@ -18,6 +18,7 @@ export class OverviewComponent {
         this.form = fb.group({});
         this.bike = bike;
         this.overviewArray = this.bike.toString();
+        console.log(this.overviewArray.length);
     }
     submit() {
         this._router.navigate(['orderform']);

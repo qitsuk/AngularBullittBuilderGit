@@ -14,21 +14,21 @@
      <div class='checkbox'>  
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/d/y/dynamowheelsupra3.jpg' class='imgbikewizard' >  
         
-   <label><input type='checkbox' value='' [(ngModel)]="dynamo" [ngModelOptions]="{standalone: true}">DYNAMO 20\" FRONT WHEEL (ALFINE/ALEX DM24) +€166.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="dynamo" [ngModelOptions]="{standalone: true}" (change)="dynamochanged()">DYNAMO 20\" FRONT WHEEL (ALFINE/ALEX DM24) +€166.00</label>
          <span class="seatspan">Our standard front wheel features an Alex dm24 rim (32mm wide) laced to a Alfine dynamo hub with sealed, cartridge bearings. The tyre is a Schwalbe Marathon (20x1.75) and a 6 bolt Tektro rotor is also included
 </span>
 
      </div>
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/r/e/reelight.jpg' class='imgbikewizard' > 
-   <label><input type='checkbox' value='' [(ngModel)]="reelights" [ngModelOptions]="{standalone: true}">REELIGHTS +€76.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="reelights" [ngModelOptions]="{standalone: true}" (change)="reelightschanged()">REELIGHTS +€76.00</label>
          <span class="seatspan">Reelights use a compact and smart system of magnets to generate light. Mounted at the axles of your front and rear wheels the lights continue to blink after you stop cycling for 30 seconds, handy for traffic lights and whatnot
  </span>
    </div>
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/s/c/screen_shot_2017-03-14_at_12.37.20.png' class='imgbikewizard' > 
         
-   <label><input type='checkbox' value='' [(ngModel)]="kickstand" [ngModelOptions]="{standalone: true}">CROMO KICKSTAND +€102.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="kickstand" [ngModelOptions]="{standalone: true}" (change)="kickstandchanged()">CROMO KICKSTAND +€102.00</label>
          <span class="seatspan"> The CroMo kickstand is a sturdier, steel version of our regular kickstand; designed for users looking to deploy the stand whilst loaded up with heavy goods on a regular basis like bike messengers or tradesmen. All attachments and springs included. Tools required: 8mm and 4mm allen keys and a 10mm spanner/wrench.
 </span>
    </div>  
@@ -36,23 +36,23 @@
    <div class='col-sm-6'>  
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/t/h/the_abus_granit_x_plus_is_aboutas_secure_as_a_portable_lock_can_be.jpg' class='imgbikewizard' > 
-   <label><input type='checkbox' value='' [(ngModel)]="granite1" [ngModelOptions]="{standalone: true}">ABUS 5400 GRANITE U-LOCK +€145.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="granite1" [ngModelOptions]="{standalone: true}" (change)="granite1changed()">ABUS 5400 GRANITE U-LOCK +€145.00</label>
 
    </div>   
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/a/b/abus_bordo.png' class='imgbikewizard' > 
-   <label><input type='checkbox' value='' [(ngModel)]="granite2" [ngModelOptions]="{standalone: true}">ABUS BORDO 6500 GRANIT X PLUS +€131.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="granite2" [ngModelOptions]="{standalone: true}" (change)="granite2changed()">ABUS BORDO 6500 GRANIT X PLUS +€131.00</label>
          <span class="seatspan">Folding lock, featuring 5.5mm bars and extremely pick-proof cylinder for high-risk areas and for securing high quality bikes, such as the Bullitt. The lock is 85cm long, and comes with two keys and a holster for no rattle transportation on the bike.
  </span>
    </div>   
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/a/b/abus-ivy-steel-o-chain-9100-110-art-3.jpg' class='imgbikewizard' > 
-   <label><input type='checkbox' value='' [(ngModel)]="ivy" [ngModelOptions]="{standalone: true}">ABUS 9100 IVY CHAIN LOCK +€131.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="ivy" [ngModelOptions]="{standalone: true}" (change)="ivychanged()">ABUS 9100 IVY CHAIN LOCK +€131.00</label>
 
    </div>   
      <div class='checkbox'>   
         <img src='http://shop.larryvsharry.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/a/b/abusset1.jpg' class='imgbikewizard' > 
-   <label><input type='checkbox' value='' [(ngModel)]="bordo" [ngModelOptions]="{standalone: true}">ABUS BORDO + DETECTO 8077 ALARM +€319.00</label>
+   <label><input type='checkbox' value='' [(ngModel)]="bordo" [ngModelOptions]="{standalone: true}" (change)="bordochanged()">ABUS BORDO + DETECTO 8077 ALARM +€319.00</label>
          <span class="seatspan">Living in constant fear of your beloved Bullitt being stolen? We have a solution for you. This pack combines the super-strong Bordo from Abus with their motocycle alarm the Detecto, which rather conveniently sits on the chainring and emits a deafening shreek when tampered with by thieving scumbags. The key for both the lock and alarm has been cleverly integrated, so it is necessary to carry just one key for both.
  </span>
    </div>  
