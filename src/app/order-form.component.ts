@@ -16,6 +16,7 @@ export class OrderFormComponent implements OnInit {
     form: FormGroup;
     countries;
     country = 'Country';
+    createUser: boolean;
     constructor(fb: FormBuilder, private _router: Router, private _ac: AppComponent, private _countriesService: CountriesService) {
         this.form = fb.group({
             email: ['', Validators.compose([Validators.required, Validators.email])],
@@ -29,7 +30,7 @@ export class OrderFormComponent implements OnInit {
     submit() {
         this._router.navigate(['orderconfirmation']);
         this._ac.updateProgressBar(90);
-        alert('Please check your email, for a payment link.');
+        alert('A payment link has been sent to the entered email address.\nPlease check your email for futher details.');
     }
 
     back() {
@@ -39,5 +40,8 @@ export class OrderFormComponent implements OnInit {
 
     ngOnInit() {
         this.countries = this._countriesService.getCountries();
+    }
+    userchanged() {
+        console.log(this.createUser);
     }
 }
