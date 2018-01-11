@@ -7,11 +7,24 @@ import { Injectable, Component } from '@angular/core';
 
 @Injectable()
 export class BikeComponent {
-    frame: string;
-    framePrice: number;
+    frame = {
+        price: 0,
+        type: ''
+    };
     color: string;
-    drivetrain: string;
-    drivetrainPrice: number;
+
+    drivetrain = {
+        price: 0,
+        type: ''
+    };
+    bbx = {
+        price: 354,
+        color: ''
+    };
+    billboard = {
+        price: 69,
+        color: ''
+    };
     customize: Array<string> = new Array<string>();
     accessories: Array<string> = new Array<string>();
     extras: Array<string> = new Array<string>();
@@ -21,14 +34,14 @@ export class BikeComponent {
     toString() {
         this.allParts.push('Your Order: ');
         if (this.frame) {
-            this.allParts.push(this.frame);
+            this.allParts.push(this.frame.type);
         }
         if (this.color) {
             this.allParts.push('Color: ');
             this.allParts.push(this.color);
         }
         if (this.drivetrain) {
-            this.allParts.push(this.drivetrain);
+            this.allParts.push(this.drivetrain.type);
         }
         if (this.customize) {
             this.allParts.push('Custom Options: ');
@@ -50,4 +63,11 @@ export class BikeComponent {
         }
         return this.allParts;
     }
+    getTotalPrice() {
+        let totalPrice = 0;
+        totalPrice += this.frame.price;
+        totalPrice += this.drivetrain.price;
+        return totalPrice;
+    }
 }
+

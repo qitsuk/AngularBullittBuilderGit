@@ -30,7 +30,12 @@ export class OrderFormComponent implements OnInit {
     submit() {
         this._router.navigate(['orderconfirmation']);
         this._ac.updateProgressBar(90);
-        alert('A payment link has been sent to the entered email address.\nPlease check your email for futher details.');
+        if (!this.createUser) {
+            alert('A payment link has been sent to the entered email address.\nPlease check your email for futher details.');
+        } else {
+            alert('A payment link has been sent to the entered email address.\nPlease check your email for futher details.\n\nAlso,' +
+            ' we have sent you temporary password.\nPlease follow the link in the email, to change your password to a more permanent one.')
+        }
     }
 
     back() {

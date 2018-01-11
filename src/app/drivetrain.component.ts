@@ -11,12 +11,10 @@ import { BikeComponent } from './bike.component';
 })
 
 export class DrivetrainComponent {
+    changed = false;
     form: FormGroup;
     bike;
-    drivetrain;
-    price = 0;
     idx;
-    prevPrice = 0;
 
     constructor(private _router: Router, private _ac: AppComponent, fb: FormBuilder, bike: BikeComponent) {
         this.form = fb.group({});
@@ -25,25 +23,21 @@ export class DrivetrainComponent {
         console.log(this.bike.toString());
     }
     submit() {
-        this._router.navigate(['customize']);
-        this._ac.updateProgressBar(40);
+        if (this.changed) {
+            this._router.navigate(['customize']);
+            this._ac.updateProgressBar(40);
+        } else {
+            alert('You must choose a drivetrain for you bike.');
+        }
     }
     back() {
         this._router.navigate(['color']);
         this._ac.updateProgressBar(20);
     }
     onSelectionChange(drivetrain, price) {
-        if (this.prevPrice === 0 || this.prevPrice === NaN) {
-            this.prevPrice = price;
-            this.bike.drivetrain = drivetrain;
-            this._ac.totalPrice += price;
-            console.log(price, this.prevPrice);
-        } else {
-            this.bike.drivetrain = drivetrain;
-            this._ac.totalPrice = ((this._ac.totalPrice - this.prevPrice) + price);
-            this.bike.drivetrainPrice = this.price;
-            this.prevPrice = price;
-            console.log(price, this.prevPrice);
-        }
+        this.changed = true;
+        this.bike.drivetrain.type = drivetrain;
+        this.bike.drivetrain.price = price;
+        this._ac.totalPrice = this.bike.getTotalPrice();
     }
 }

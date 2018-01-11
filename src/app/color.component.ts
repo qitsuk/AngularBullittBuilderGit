@@ -11,6 +11,7 @@ import { BikeComponent } from './bike.component';
 })
 
 export class ColorComponent {
+    changed = false;
     form: FormGroup;
     bike;
     color;
@@ -21,9 +22,13 @@ export class ColorComponent {
         this.bike = bike;
     }
     submit() {
+        if (this.changed) {
         this._router.navigate(['drivetrain']);
         this._ac.updateProgressBar(30);
         this.bike.color = this.color;
+        } else {
+            alert('You must choose a color for your bike.');
+        }
     }
     back() {
         this._router.navigate(['frame']);
@@ -31,6 +36,7 @@ export class ColorComponent {
         this._ac.totalPrice = this._ac.totalPrice;
     }
     onSelectionChange(selection) {
+        this.changed = true;
         this.color = selection;
     }
 }
